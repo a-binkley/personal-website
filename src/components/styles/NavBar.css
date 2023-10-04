@@ -1,0 +1,41 @@
+
+:root {
+    --background-color: #0B0C10;
+    --b: #1F2833;
+    --text-color: #C5C6C7;
+    --accent-color: #66FCF1;
+    --e: #45A29E;
+}
+
+.navBarContainer {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
+    /* font-family: 'Proxima Nova' OR 'Gotham'; */
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.navBarPageList {
+
+}
+
+.navBarPageList > button {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: 0px;
+    cursor: pointer;
+}
+
+#navBarSeparator {
+    background-color: var(--accent-color);
+    width: 2px;
+    height: 20px;
+}
+
+.navBarSocialIcons {
+
+}
+
+.navBarSocialIcons > image {
+    width: 32px;
+    height: 32px;
+}
