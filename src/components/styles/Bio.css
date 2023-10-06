@@ -1,9 +1,55 @@
-#bioContainer {
-    border: 2px solid red;
-    width: 30vw;
-    height: 70%;
+:root {
+    --padding: 10px;
 }
 
-h1, p {
+#bioContainer {
+    /* border: 2px solid red; */
+    width: 28vw;
+    height: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+h1, h2, p {
+    position: relative;
+    margin: 0px;
     font-family: 'Proxima Nova Rg';
+}
+
+h1, h2 {
+    top: var(--padding);
+    left: var(--padding);
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+p {
+    top: calc(3 * var(--padding));
+    font-size: 18pt;
+    margin-bottom: var(--padding);
+}
+
+ol {
+    position: relative;
+    top: 50px;
+    left: -40px;
+}
+
+.infoOptionRow {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+svg {
+    margin: 5px var(--padding) 0px 10px;
+}
+
+.infoOptionRow a {
+    position: relative;
+    top: -8px;
+    left: -8px;
 }

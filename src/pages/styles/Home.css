@@ -8,7 +8,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
+    background: transparent;
 
     width: 90vw;
     height: 90vh;
