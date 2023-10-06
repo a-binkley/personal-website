@@ -1,12 +1,12 @@
 import CSS from 'csstype';
 
-import './styles/AccentTab.css';
+import '../styles/AccentTab.css';
 
 type TabProps = { corner: 'NW' | 'SE' };
 
 export function AccentTab(props: TabProps) {
     return (
-        <img src='img/TealTab.png' style={tabStyleFromProps(props)}/>
+        <img src='img/TealTab.png' alt='' style={tabStyleFromProps(props)}/>
     );
 };
 

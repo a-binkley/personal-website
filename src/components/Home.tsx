@@ -1,6 +1,6 @@
-import { AccentTab, Bio, Experience, SocialLink } from '../components';
+import { AccentTab, Bio, Experience, SocialLink } from '.';
 
-import './styles/Home.css';
+import '../styles/Home.css';
 
 export function Home() {
     return (

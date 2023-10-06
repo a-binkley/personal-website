@@ -1,25 +1,15 @@
-import './styles/Experience.css';
+import { schoolExperience, workExperience } from '../ExperienceData';
+import { ExperienceList } from '.';
 
-type ExperienceDetails = {
-    companyOrSchool: string;
-    fromDate: string;
-    toDate: string;
-    description: string;
-}
-
-const workExperience: ExperienceDetails[] = [
-    {
-        companyOrSchool: 'The Vanguard Group',
-        fromDate: 'May 2022',
-        toDate: 'Present',
-        description: 'TODO'
-    }
-]
+import '../styles/Experience.css';
+import '../fonts/Proxima Nova/stylesheet.css';
 
 export function Experience() {
     return (
         <div id='experienceContainer'>
-
+            <ExperienceList title='Work Experience' data={workExperience} />
+            <div className='separatorLine' />
+            <ExperienceList title='Education History' data={schoolExperience} />
         </div>
     );
 };

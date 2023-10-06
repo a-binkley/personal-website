@@ -1,4 +1,4 @@
-import './styles/Bio.css';
+import '../styles/Bio.css';
 import '../fonts/Proxima Nova/stylesheet.css';
 
 export function Bio() {
@@ -8,9 +8,11 @@ My main areas of expertise are TypeScript, Node.js, Python, and Java. I \
 have experience with and certifications for various cloud technologies, \
 and I'm passionate about exploring the intersections of technology with \
 the arts and humanities.`,
-        `TODO: extracurriculars`,
-        `If you're interested in knowing more, you can view my GitHub and \
-LinkedIn profiles via the social icons at the bottom of the page. \
+        `In addition to my full-time work and individual projects in computer \
+science, I maintain a wide range of hobbies including woodworking, Sunfish \
+sailing, kayaking, and 3D printing and painting minifigures for Dungeons & Dragons.`,
+        `If you're interested in knowing more about my professional work, you can \
+view my GitHub and LinkedIn profiles via the social icons at the bottom of the page. \
 Additionally, you can:`
     ];
 
@@ -34,6 +36,7 @@ Additionally, you can:`
         <div id='bioContainer'>
             <h2>Hi there, my name is</h2>
             <h1>Adrian Binkley</h1>
+            <div className='separatorLine' />
             {description.map((paragraph) => <p>{paragraph}</p>)}
             <ol>
                 {moreInfoOptions.map(([icon, option]) => {
