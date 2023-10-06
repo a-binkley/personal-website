@@ -1,7 +1,12 @@
-import { NavBar } from '../components';
+import { AccentTab } from '../components';
+
+import './styles/Home.css';
 
 export function Home() {
     return (
-        <NavBar current='home' />
+        <>
+            <AccentTab corner='NW' />
+            <AccentTab corner='SE' />
+        </>
     );
 };
