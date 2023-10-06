@@ -6,7 +6,7 @@ import '../fonts/Proxima Nova/stylesheet.css';
 export function ExperienceList(props: { title: string, data: ProfessionalDetails[] |  EducationalDetails[] }) {
     return (
         <>
-            <h1 id='workExperienceLbl'>Work Experience</h1>
+            <h1 id='workExperienceLbl'>{props.title}</h1>
             <ul id='workExperienceColumn'>
                 {props.data.map((instance) => {
                     return (
