@@ -1,41 +1,59 @@
-
 :root {
     --background-color: #0B0C10;
-    --b: #1F2833;
+    --background-color-2: #1F2833;
     --text-color: #C5C6C7;
     --accent-color: #66FCF1;
-    --e: #45A29E;
+    --accent-color-dark: #45A29E;
 }
 
 .navBarContainer {
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
     /* font-family: 'Proxima Nova' OR 'Gotham'; */
+    width: 100vw;
+    height: 80px;
     color: var(--text-color);
     background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
 }
 
 .navBarPageList {
-
+    /* border: 2px solid red; */
+    width: 40vw;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navBarPageList > button {
     color: var(--text-color);
     background-color: var(--background-color);
-    border: 0px;
+    /* border: 2px solid orange; */
+    border: none;
+    margin: 20px;
     cursor: pointer;
+    font-size: 2.4em;
+    font-family: 'Proxima Nova Rg';
 }
 
-#navBarSeparator {
+/* #navBarSeparator {
+    margin: 0px;
     background-color: var(--accent-color);
     width: 2px;
     height: 20px;
-}
+} */
 
 .navBarSocialIcons {
-
+    width: 160px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.navBarSocialIcons > image {
+.navBarSocialIcons > a {
     width: 32px;
     height: 32px;
+    color: var(--accent-color-dark);
+    cursor: pointer;
 }
