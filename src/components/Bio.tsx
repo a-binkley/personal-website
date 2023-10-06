@@ -10,9 +10,13 @@ and I'm passionate about exploring the intersections of technology with \
 the arts and humanities.`,
         `In addition to my full-time work and individual projects in computer \
 science, I maintain a wide range of hobbies including woodworking, Sunfish \
-sailing, kayaking, and 3D printing and painting minifigures for Dungeons & Dragons.`,
+sailing, kayaking, and 3D printing and painting minifigures for Dungeons & Dragons. \
+While my career is now primarily focused on technology, I studied classical music for \
+15 years preceding this - including obtaining a Bachelor's of Music. I still enjoy and \
+regularly listen to classical music, but I have found the day-to-day work of software engineering \
+to be much better aligned with my long-term goals and preference for analytical thinking.`,
         `If you're interested in knowing more about my professional work, you can \
-view my GitHub and LinkedIn profiles via the social icons at the bottom of the page. \
+view my GitHub portfolio and LinkedIn profile via the social icons at the bottom of the page. \
 Additionally, you can:`
     ];
 
@@ -36,7 +40,7 @@ Additionally, you can:`
         <div id='bioContainer'>
             <h2>Hi there, my name is</h2>
             <h1>Adrian Binkley</h1>
-            <div className='separatorLine' />
+            <div className='separatorLineBio' />
             {description.map((paragraph) => <p>{paragraph}</p>)}
             <ol>
                 {moreInfoOptions.map(([icon, option]) => {

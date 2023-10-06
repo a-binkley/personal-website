@@ -8,7 +8,7 @@ export function Experience() {
     return (
         <div id='experienceContainer'>
             <ExperienceList title='Work Experience' data={workExperience} />
-            <div className='separatorLine' />
+            <div className='separatorLineExperience' />
             <ExperienceList title='Education History' data={schoolExperience} />
         </div>
     );
