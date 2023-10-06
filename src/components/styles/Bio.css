@@ -1,0 +1,9 @@
+#bioContainer {
+    border: 2px solid red;
+    width: 30vw;
+    height: 70%;
+}
+
+h1, p {
+    font-family: 'Proxima Nova Rg';
+}
