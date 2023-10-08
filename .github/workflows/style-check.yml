@@ -1,0 +1,15 @@
+name: Style Check
+
+on:
+  push:
+    branches-ignore:
+    - 'main'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  style-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Lint Check
+        run: npm run lint
