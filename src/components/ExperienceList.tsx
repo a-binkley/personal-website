@@ -18,6 +18,7 @@ export function ExperienceList(props: { title: string, data: ProfessionalDetails
                                 <div className='experienceSepPipe' />
                                 <h4 className='experienceDateLbl'>{`${instance.fromDate} - ${instance.toDate}`}</h4>
                                 <h5 className='experienceCityLbl' style={{ color: '#7f7f7f' }}>{instance.city}</h5>
+                                <h6 className='experienceRoleLbl'>{instance.role}</h6>
                             </div>
                             <p className='experienceSummaryLbl'>{instance.summary}</p>
                         </li>

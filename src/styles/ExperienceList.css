@@ -45,6 +45,7 @@
 .employerLbl,
 .experienceDateLbl, 
 .experienceCityLbl, 
+.experienceRoleLbl,
 .experienceSummaryLbl {
     position: relative;
     font-family: 'Proxima Nova Rg';
@@ -72,6 +73,11 @@
 
 .experienceLocationContainer {
     position: relative;
+}
+
+.experienceRoleLbl {
+    font-size: 16pt;
+    margin: 0px 0px 5px 0px;
 }
 
 .experienceSummaryLbl {
