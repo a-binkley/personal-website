@@ -1,0 +1,7 @@
+svg:hover {
+    transition: fill 0.3s;
+}
+
+#github:hover { fill: #bbbbbb }
+
+#linkedin:hover { fill: #0a66c2 }

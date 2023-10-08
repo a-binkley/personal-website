@@ -15,7 +15,7 @@
 
 .experienceCellContainer::before {
     content: '';
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     left: -10px;
     top: 10px;
@@ -24,6 +24,11 @@
     border-radius: 50%;
     border: 3px solid var(--accent-color);
     z-index: 60;
+    transition: background-color 0.2s;
+}
+
+.experienceCellContainer:hover::before {
+    background-color: var(--accent-color);
 }
 
 .experienceCellContainer {
