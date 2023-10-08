@@ -1,0 +1,30 @@
+:root {
+    --icon-size: 64px;
+    --padding: 20px;
+}
+
+#bodySections {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid orange; */
+    background: transparent;
+
+    width: 90vw;
+    height: 90vh;
+    left: 5vw;
+    top: 5vh;
+}
+
+#socialsContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: calc(2 * var(--icon-size) + var(--padding));
+    height: var(--icon-size);
+    left: calc(50vw - calc(2 * var(--icon-size) + var(--padding)) / 2);
+    bottom: 5vh;
+}

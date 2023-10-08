@@ -1,0 +1,62 @@
+:root {
+    --padding: 10px;
+}
+
+#bioContainer {
+    width: 32vw;
+    height: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#bioContainer h1, h2, p {
+    position: relative;
+    margin: 0px;
+    font-family: 'Proxima Nova Rg';
+}
+
+#bioContainer h1, h2 {
+    top: var(--padding);
+    left: var(--padding);
+}
+
+#bioContainer h1 {
+    font-size: 30pt;
+}
+
+.separatorLineBio {
+    position: relative;
+    width: 90%;
+    height: 2px;
+    left: 5%;
+    margin: 60px 0px 40px 0px;
+    border-top: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+#bioContainer p {
+    text-indent: 30px;
+    font-size: 18pt;
+    margin-bottom: var(--padding);
+}
+
+#bioContainer ol {
+    position: relative;
+    left: -40px;
+}
+
+.infoOptionRow {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.infoOptionRow svg {
+    margin: 5px var(--padding) 0px 10px;
+}
+
+.infoOptionRow a {
+    position: relative;
+    top: -7px;
+}

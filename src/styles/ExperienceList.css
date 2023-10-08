@@ -1,0 +1,87 @@
+:root {
+    --accent-color: #62c1b1;
+}
+
+#workExperienceColumn,
+#schoolExperienceColumn {
+    list-style: none;
+}
+
+#workExperienceLbl,
+#schoolExperienceLbl {
+    font-family: 'Proxima Nova Rg';
+    text-align: center;
+}
+
+.experienceCellContainer::before {
+    content: '';
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    z-index: 60;
+}
+
+.experienceCellContainer {
+    position: relative;
+    padding-left: 24px;
+}
+
+.experienceCellContainer:not(:last-of-type)::after {
+    width: 3px;
+    height: calc(100% + 10px);
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 28px;
+    z-index: 2;
+    background-color: var(--accent-color);
+}
+
+.employerLbl,
+.experienceDateLbl, 
+.experienceCityLbl, 
+.experienceSummaryLbl {
+    position: relative;
+    font-family: 'Proxima Nova Rg';
+    left: 10px;
+}
+
+.employerLbl {
+    position: relative;
+    font-size: 20pt;
+    display: inline;
+    top: 0px;
+}
+
+.experienceSepPipe {
+    position: relative;
+    display: inline-block;
+    content: '';
+    width: 2px;
+    height: 28px;
+    top: 6px;
+    left: 12px;
+    margin: 0px 5px;
+    background-color: var(--accent-color);
+}
+
+.experienceLocationContainer {
+    position: relative;
+}
+
+.experienceSummaryLbl {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.experienceDateLbl, 
+.experienceCityLbl {
+    display: inline;
+    font-size: 14pt;
+    margin: 5px;
+}

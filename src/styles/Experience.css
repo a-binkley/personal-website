@@ -1,0 +1,19 @@
+:root {
+    --accent-color: #62c1b1;
+}
+
+#experienceContainer {
+    width: 32vw;
+    height: 75%;
+    background: transparent;
+}
+
+.separatorLineExperience {
+    position: relative;
+    width: 90%;
+    height: 2px;
+    left: 5%;
+    margin: 40px 0px;
+    border-top: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+}
