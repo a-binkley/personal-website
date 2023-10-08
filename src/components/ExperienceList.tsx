@@ -9,10 +9,12 @@ export function ExperienceList(props: { title: string, data: ProfessionalDetails
             <h1 id='workExperienceLbl'>{props.title}</h1>
             <ul id='workExperienceColumn'>
                 {props.data.map((instance) => {
+                    const site = isProfessionalDetail(instance) ? instance.employer : instance.school;
+
                     return (
-                        <li className='experienceCellContainer'>
+                        <li className='experienceCellContainer' key={site}>
                             <div className='experienceLocationContainer'>
-                                <h2 className='employerLbl'>{isProfessionalDetail(instance) ? instance.employer : instance.school}</h2>
+                                <h2 className='employerLbl'>{site}</h2>
                                 <div className='experienceSepPipe' />
                                 <h4 className='experienceDateLbl'>{`${instance.fromDate} - ${instance.toDate}`}</h4>
                                 <h5 className='experienceCityLbl' style={{ color: '#7f7f7f' }}>{instance.city}</h5>
@@ -24,4 +26,4 @@ export function ExperienceList(props: { title: string, data: ProfessionalDetails
             </ul>
         </>
     );
-};
+}

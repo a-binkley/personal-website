@@ -41,13 +41,13 @@ Additionally, you can:`
             <h2>Hi there, my name is</h2>
             <h1>Adrian Binkley</h1>
             <div className='separatorLineBio' />
-            {description.map((paragraph) => <p>{paragraph}</p>)}
+            {description.map((paragraph, index) => <p key={`p-${index}`}>{paragraph}</p>)}
             <ol>
-                {moreInfoOptions.map(([icon, option]) => {
+                {moreInfoOptions.map(([icon, option], index) => {
                     return (
-                        <li className='infoOptionRow'>
+                        <li className='infoOptionRow' key={`info-${index}`}>
                             <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' className={`bi bi-${icon}`} viewBox='0 0 16 16'>
-                                {iconPaths[icon].map((path) => <path d={path} />)}
+                                {iconPaths[icon].map((path, index) => <path d={path} key={`icon-path-${index}`} />)}
                             </svg>
                             <a>{option}</a>
                         </li>
@@ -56,4 +56,4 @@ Additionally, you can:`
             </ol>
         </div>
     );
-};
+}

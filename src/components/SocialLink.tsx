@@ -11,4 +11,4 @@ export function SocialLink(props: { href: string; }) {
             </svg>
         </a>
     );
-};
+}

@@ -12,4 +12,4 @@ export function Experience() {
             <ExperienceList title='Education History' data={schoolExperience} />
         </div>
     );
-};
+}

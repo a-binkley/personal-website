@@ -17,4 +17,4 @@ export function Home() {
             <AccentTab corner='SE' />
         </>
     );
-};
+}

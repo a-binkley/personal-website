@@ -13,7 +13,7 @@ export type EducationalDetails = {
     school: string;
 } & GeneralDetails;
 
-export function isProfessionalDetail(x: Object): x is ProfessionalDetails {
+export function isProfessionalDetail(x: object): x is ProfessionalDetails {
     return Object.keys(x).includes('employer');
 }
 
