@@ -1,10 +1,13 @@
 :root {
+    --icon-size: 64px;
+    --padding: 10px;
     --accent-color: #62c1b1;
 }
 
 #experienceContainer {
-    width: 32vw;
-    height: 80%;
+    height: 80vh;
+    /* border: 2px solid red; */
+    padding: var(--padding);
     background: transparent;
     overflow-y: auto;
     overflow-x: hidden;
@@ -18,4 +21,19 @@
     margin: 40px 0px;
     border-top: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
+}
+
+/* Desktop / landscape-mode tablets */
+@media only screen and (min-width: 1000px) {
+    #experienceContainer {
+        width: 32vw;
+    }
+}
+
+/* Phones and portrait-mode tablets */
+@media only screen and (max-width: 999px) {
+    #experienceContainer {
+        max-width: 100%;
+        margin-bottom: calc(var(--icon-size) + 2 * var(--padding));
+    }
 }
