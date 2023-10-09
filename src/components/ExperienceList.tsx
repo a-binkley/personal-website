@@ -6,8 +6,8 @@ import '../fonts/Proxima Nova/stylesheet.css';
 export function ExperienceList(props: { title: string, data: ProfessionalDetails[] |  EducationalDetails[] }) {
     return (
         <>
-            <h1 id='workExperienceLbl'>{props.title}</h1>
-            <ul id='workExperienceColumn'>
+            <h1 className='experienceLbl'>{props.title}</h1>
+            <ul className='experienceListWrapper'>
                 {props.data.map((instance) => {
                     const site = isProfessionalDetail(instance) ? instance.employer : instance.school;
 

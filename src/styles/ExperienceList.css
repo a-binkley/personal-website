@@ -1,10 +1,15 @@
 :root {
+    --padding: 10px;
     --accent-color: #62c1b1;
 }
 
-#workExperienceColumn,
-#schoolExperienceColumn {
+.experienceLbl,
+.experienceListWrapper {
     list-style: none;
+}
+
+.experienceLbl {
+    text-align: center;
 }
 
 #workExperienceLbl,
@@ -27,13 +32,10 @@
     transition: background-color 0.2s;
 }
 
-.experienceCellContainer:hover::before {
-    background-color: var(--accent-color);
-}
-
 .experienceCellContainer {
     position: relative;
     padding-left: 24px;
+    padding-right: 20px;
 }
 
 .experienceCellContainer:not(:last-of-type)::after {
@@ -90,9 +92,35 @@
     font-size: 18px;
 }
 
-.experienceDateLbl, 
-.experienceCityLbl {
-    display: inline;
-    font-size: 14pt;
-    margin: 5px;
+/* Desktop / landscape-mode tablets */
+@media only screen and (min-width: 1000px) {
+    .experienceCellContainer:hover::before {
+        background-color: var(--accent-color);
+    }
+
+    .experienceDateLbl, 
+    .experienceCityLbl {
+        display: inline;
+        font-size: 14pt;
+        margin: 5px;
+    }
+}
+
+
+/* Phones and portrait-mode tablets */
+@media only screen and (max-width: 999px) {
+    .experienceLbl {
+        top: 10px;
+        text-align: center;
+    }
+
+    .experienceSepPipe {
+        display: none;
+    }
+
+    .experienceDateLbl, 
+    .experienceCityLbl {
+        font-size: 14pt;
+        margin: 5px 0px;
+    }
 }

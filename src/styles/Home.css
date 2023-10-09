@@ -3,28 +3,58 @@
     --padding: 20px;
 }
 
-#bodySections {
-    position: absolute;
+#socialsContainer {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    /* border: 2px solid orange; */
-    background: transparent;
-
-    width: 90vw;
-    height: 90vh;
-    left: 5vw;
-    top: 5vh;
+    justify-content: center;
+    gap: 40px;
 }
 
-#socialsContainer {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Desktop / landscape-mode tablets */
+@media only screen and (min-width: 1000px) {
+    #bodySections {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: transparent;
 
-    width: calc(2 * var(--icon-size) + var(--padding));
-    height: var(--icon-size);
-    left: calc(50vw - calc(2 * var(--icon-size) + var(--padding)) / 2);
-    bottom: 5vh;
+        width: 90vw;
+        height: 90vh;
+        left: 5vw;
+        top: 5vh;
+    }
+
+    #socialsContainer { 
+        position: absolute;
+
+        width: calc(2 * var(--icon-size) + var(--padding));
+        height: var(--icon-size);
+        left: calc(50vw - calc(2 * var(--icon-size) + var(--padding)) / 2);
+        bottom: 5vh;
+    }
+}
+
+/* Phones and portrait-mode tablets */
+@media only screen and (max-width: 999px) {
+    #bodySections {
+        position: relative;
+        background: transparent;
+
+        width: calc(100vw - 2 * var(--padding));
+        left: var(--padding);
+        top: var(--padding);
+    }
+
+    #socialsContainer { 
+        position: fixed;
+
+        width: 100%;
+        height: calc(var(--icon-size) + 2 * var(--padding));
+        left: 0px;
+        bottom: 0px;
+        background-color: #ffffff7f;
+        z-index: 100;
+        backdrop-filter: blur(20px);
+    }
 }
