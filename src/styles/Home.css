@@ -10,6 +10,10 @@
     gap: 40px;
 }
 
+#issueReporterWrapper {
+    position: fixed;
+}
+
 /* Desktop / landscape-mode tablets */
 @media only screen and (min-width: 1000px) {
     #bodySections {
@@ -32,6 +36,17 @@
         height: var(--icon-size);
         left: calc(50vw - calc(2 * var(--icon-size) + var(--padding)) / 2);
         bottom: 5vh;
+    }
+
+    #issueReporterWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+        width: 40vw;
+        bottom: 1em;
+        left: 30vw;
     }
 }
 
@@ -56,5 +71,17 @@
         background-color: #ffffff7f;
         z-index: 100;
         backdrop-filter: blur(20px);
+    }
+
+    #issueReporterWrapper {
+        text-align: right;
+        width: 13em;
+        bottom: 1.5em;
+        right: var(--padding);
+        z-index: 100;
+    }
+
+    #issueReporterLink {
+        font-size: 14pt;
     }
 }
