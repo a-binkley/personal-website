@@ -4,8 +4,10 @@
 
 #experienceContainer {
     width: 32vw;
-    height: 75%;
+    height: 80%;
     background: transparent;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .separatorLineExperience {

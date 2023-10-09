@@ -40,6 +40,12 @@
     border-bottom: 1px solid var(--accent-color);
 }
 
+.bioContentWrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80%;
+}
+
 #bioContainer p {
     text-indent: 30px;
     font-size: 18pt;

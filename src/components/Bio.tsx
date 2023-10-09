@@ -52,19 +52,21 @@ Additionally, you can:`
             <h2>Hi there, my name is</h2>
             <h1>Adrian Binkley</h1>
             <div className='separatorLineBio' />
-            {description.map((paragraph, index) => <p key={`p-${index}`}>{paragraph}</p>)}
-            <ol>
-                {moreInfoOptions.map(({iconClass, iconPaths, anchor}, index) => {
-                    return (
-                        <li className='infoOptionRow' key={`info-${index}`}>
-                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' className={`bi bi-${iconClass}`} viewBox='0 0 16 16'>
-                                {iconPaths.map((path, index) => <path d={path} key={`icon-path-${index}`} />)}
-                            </svg>
-                            {anchor}
-                        </li>
-                    );
-                })}
-            </ol>
+            <div className='bioContentWrapper'>
+                {description.map((paragraph, index) => <p key={`p-${index}`}>{paragraph}</p>)}
+                <ol>
+                    {moreInfoOptions.map(({iconClass, iconPaths, anchor}, index) => {
+                        return (
+                            <li className='infoOptionRow' key={`info-${index}`}>
+                                <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' className={`bi bi-${iconClass}`} viewBox='0 0 16 16'>
+                                    {iconPaths.map((path, index) => <path d={path} key={`icon-path-${index}`} />)}
+                                </svg>
+                                {anchor}
+                            </li>
+                        );
+                    })}
+                </ol>
+            </div>
         </div>
     );
 }
