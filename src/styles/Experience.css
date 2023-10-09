@@ -5,8 +5,7 @@
 }
 
 #experienceContainer {
-    height: 80vh;
-    /* border: 2px solid red; */
+    max-height: 80vh;
     padding: var(--padding);
     background: transparent;
     overflow-y: auto;
