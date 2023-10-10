@@ -1,6 +1,8 @@
-import { AccentTab, Bio, Experience, SocialLink } from '.';
+import { AccentTab, Bio, Experience, PageMenu, SocialLink } from '.';
 
 import '../styles/Home.css';
+
+export type PageTitle = 'About' | 'Portfolio';
 
 export function Home() {
     return (
@@ -10,6 +12,7 @@ export function Home() {
                 <Bio />
                 <Experience />
             </div>
+            <PageMenu titles={['About', 'Portfolio']} />
             <div id='socialsContainer'>
                 <SocialLink href='https://github.com/a-binkley' />
                 <SocialLink href='https://linkedin.com/in/adrian-binkley/' />
