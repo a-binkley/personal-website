@@ -5,6 +5,7 @@ export function NotFound() {
         <>
             <h1>{'Sorry, we couldn\'t find that page.'}</h1>
             <Link to='/'>Go back home</Link>
+            {/* TODO: make it pretty */}
             <Outlet />
         </>
     );

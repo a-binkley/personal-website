@@ -1,5 +1,11 @@
 :root {
-
+    --icon-size: 64px;
+    --paddle-ring-scale: 1.3;
+    --padding: 10px;
+    --container-height: 30vh;
+    --accent-color: #62c1b1;
+    --accent-color-muted: #62c1b17f;
+    --outline-color: #7f7f7f;
 }
 
 #pageMenuWrapper {
@@ -8,12 +14,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 15vw;
-    height: 21vh;
+    height: var(--container-height);
 
-    top: 40vh;
+    top: calc(50vh - var(--container-height) / 2);
     left: 0px;
-    border: 2px dashed red;
-
+    /* border-right: 2px dashed red; */
 }
 
 #pageMenuList {
@@ -21,32 +26,45 @@
 }
 
 .pageMenuListItem::before {
-    /* TODO: stem */
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: calc(var(--icon-size) / 4);
+
+    left: -44px;
+    top: calc(var(--icon-size) * var(--paddle-ring-scale) * 3 / 8);
+    border-top: 3px solid var(--outline-color);
+    border-bottom: 3px solid var(--outline-color);
 }
 
 .pageMenuListItem {
     position: relative;
-    width: 100%;
-    height: 7vh;
-    border: 2px dashed orange;
+    fill: var(--outline-color);
+    margin: 20px 0px;
+
+    width: calc(var(--icon-size) * var(--paddle-ring-scale));
+    height: calc(var(--icon-size) * var(--paddle-ring-scale));
+    border: 4px solid var(--outline-color);
+    border-radius: calc(var(--icon-size) * var(--paddle-ring-scale));
 }
 
-.pageMenuListItem .current {
-
+.current {
+    background-color: var(--accent-color-muted);
 }
 
-.pageMenuListItem .other {
-    
-}
-
-.pageMenuPaddleEdge {
-
+.pageMenuListItem:hover {
+    background-color: var(--accent-color);
+    /* TODO: add expansion with title */
 }
 
 .pageMenuLink {
-
+    position: relative;
+    top: calc(50% - var(--icon-size) / 2);
+    left: calc(var(--icon-size) * (var(--paddle-ring-scale) - 1) / 2 - 1px);
 }
 
 .pageMenuLink svg {
-
+    position: relative;
+    width: var(--icon-size);
+    height: var(--icon-size);
 }

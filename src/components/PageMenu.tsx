@@ -40,14 +40,12 @@ function MenuPaddle(props: { title: PageTitle, type: 'current' | 'other' }) {
     const target = props.title.toLowerCase();
 
     return (
-        <li className='pageMenuListItem'>
-            <div className='pageMenuPaddleEdge'>
-                <Link to={`/${target === 'home' ? '' : target}`} style={{ color: '#3f3f3f' }} className='pageMenuLink'>
-                    <svg id={`paddleIcon${props.title}`} xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='currentColor' className={`bi bi-${info.iconClass} ${props.type}`} viewBox='0 0 16 16'>
-                        {info.iconPaths.map((iconPath, index) => <path d={iconPath} key={`paddleIconPath-${index}`} />)}
-                    </svg>
-                </Link>
-            </div>
+        <li className={`pageMenuListItem ${props.type}`}>
+            <Link to={`/${target === 'home' ? '' : target}`} style={{ color: '#3f3f3f' }} className='pageMenuLink'>
+                <svg id={`paddleIcon${props.title}`} xmlns='http://www.w3.org/2000/svg' className={`bi bi-${info.iconClass}`} viewBox='0 0 16 16'>
+                    {info.iconPaths.map((iconPath, index) => <path d={iconPath} key={`paddleIconPath-${index}`} />)}
+                </svg>
+            </Link>
         </li>
     );
 }
