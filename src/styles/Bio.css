@@ -11,7 +11,7 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
-    
+
 #bioContainer h1, 
 #bioContainer h2, 
 #bioContainer p {
@@ -26,12 +26,12 @@
     top: var(--padding);
     left: var(--padding);
 }
-    
+
 #bioContainer h1 {
     font-size: 30pt;
     color: #2f2f2f;
 }
-    
+
 .separatorLineBio {
     position: relative;
     width: 100%;
@@ -61,7 +61,7 @@
     margin: 5px var(--padding) 0px 10px;
 }
 
-.infoOptionRow a {
+.infoOptionRow .bioLink {
     position: relative;
     top: -7px;
 }

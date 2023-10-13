@@ -1,6 +1,8 @@
 import '../styles/Bio.css';
 import '../fonts/Proxima Nova/stylesheet.css';
+
 import { ReactElement } from 'react';
+import { Link } from 'react-router-dom';
 
 export function Bio() {
     const description = [
@@ -15,9 +17,9 @@ sailing, kayaking, and 3D printing and painting minifigures for Dungeons & Drago
 While my career is now primarily focused on technology, I studied classical music for \
 15 years preceding this - including obtaining a Bachelor's of Music. I still enjoy and \
 regularly listen to classical music, but I have found the day-to-day work of software engineering \
-to be much better aligned with my long-term goals and preference for analytical thinking.`,
-        `If you're interested in knowing more about my professional work, you can \
-view my GitHub portfolio and LinkedIn profile via the social icons at the bottom of the page. \
+to be much better aligned with my long-term goals and preference for analytical thinking.`,  // TODO: move to /about
+        `If you're interested in knowing more, you can view my portfolio and a longer biography \
+via the navigation bar on the left. \
 Additionally, you can:`
     ];
 
@@ -28,7 +30,7 @@ Additionally, you can:`
                 'M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z', 
                 'M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z',
             ],
-            anchor: <a download>Download my Résumé</a>  // TODO: fix file hosting (S3?)
+            anchor: <Link to='Resume.pdf' target='_blank' className='bioLink' download='Adrian Binkley - Resume.pdf'>Download my Résumé</Link>
         // TODO: add back once CV finalized
         // }, {
         //     iconClass: 'download',
@@ -43,7 +45,7 @@ Additionally, you can:`
                 `M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 \
 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z`
             ],
-            anchor: <a href='mailto:adrianbinkley@gmail.com'>Contact me</a>
+            anchor: <a href='mailto:adrianbinkley@gmail.com' className='bioLink'>Contact me</a>
         }
     ];
 
