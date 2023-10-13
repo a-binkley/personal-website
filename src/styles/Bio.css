@@ -61,7 +61,7 @@
     margin: 5px var(--padding) 0px 10px;
 }
 
-.infoOptionRow a {
+.infoOptionRow .bioLink {
     position: relative;
     top: -7px;
 }

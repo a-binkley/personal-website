@@ -1,8 +1,7 @@
-import { AccentTab, Bio, Experience, PageMenu, SocialLink } from '.';
+import { Outlet } from 'react-router-dom';
+import { AccentTab, Bio, Experience, PageMenu, SocialLink } from '../components';
 
 import '../styles/Home.css';
-
-export type PageTitle = 'About' | 'Portfolio';
 
 export function Home() {
     return (
@@ -12,7 +11,7 @@ export function Home() {
                 <Bio />
                 <Experience />
             </div>
-            <PageMenu titles={['About', 'Portfolio']} />
+            <PageMenu titles={['Home', 'Portfolio', 'About']} current='Home' />
             <div id='socialsContainer'>
                 <SocialLink href='https://github.com/a-binkley' />
                 <SocialLink href='https://linkedin.com/in/adrian-binkley/' />
@@ -22,6 +21,7 @@ export function Home() {
                 <a id='issueReporterLink' href='https://github.com/a-binkley/personal-website/issues' target='_blank' rel='noreferrer'>Report an issue</a>
             </div>
             <AccentTab corner='SE' />
+            <Outlet />
         </>
     );
 }
