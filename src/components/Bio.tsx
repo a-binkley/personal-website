@@ -16,9 +16,9 @@ sailing, kayaking, and 3D printing and painting minifigures for Dungeons & Drago
 While my career is now primarily focused on technology, I studied classical music for \
 15 years preceding this - including obtaining a Bachelor's of Music. I still enjoy and \
 regularly listen to classical music, but I have found the day-to-day work of software engineering \
-to be much better aligned with my long-term goals and preference for analytical thinking.`,
-        `If you're interested in knowing more about my professional work, you can \
-view my GitHub portfolio and LinkedIn profile via the social icons at the bottom of the page. \
+to be much better aligned with my long-term goals and preference for analytical thinking.`,  // TODO: move to /about
+        `If you're interested in knowing more, you can view my portfolio and a longer biography \
+via the navigation bar on the left. \
 Additionally, you can:`
     ];
 

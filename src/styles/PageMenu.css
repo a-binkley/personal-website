@@ -40,7 +40,7 @@
 .pageMenuListItem {
     position: relative;
     fill: var(--outline-color);
-    margin: 20px 0px;
+    margin: calc(var(--padding) / 2) 0px;
 
     width: calc(var(--icon-size) * var(--paddle-ring-scale));
     height: calc(var(--icon-size) * var(--paddle-ring-scale));
