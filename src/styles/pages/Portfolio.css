@@ -3,34 +3,26 @@
     --accent-color: #62c1b1;
 }
 
-#about-header,
-#about-p-wrapper {
+#portfolio-header,
+#portfolio-body-wrapper {
     position: absolute;
     left: 0;
     height: max-content;
-    width: 100vw;
     z-index: -1;
 }
 
-#about-header,
-.about-p {
-    font-family: 'Proxima Nova Rg';
-    color: #333;
-}
-
-#about-header {
+#portfolio-header {
     top: 0;
+    width: 100vw;
+    font-family: 'Proxima Nova Rg';
     font-size: 40pt;
+    color: #333;
     text-align: center;
     margin: var(--padding) 0;
 }
 
-#about-p-wrapper {
+#portfolio-body-wrapper {
     top: 80px;
+    width: 100vw;
     padding: var(--padding);
-}
-
-.about-p {
-    font-size: 14pt;
-    text-indent: 2.5em;
 }

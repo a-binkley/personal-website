@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { AccentTab, Bio, Experience, PageMenu, SocialLink } from '../components';
+import { AccentTab, Bio, Experience, PageMenu } from '..';
 
-import '../styles/Home.css';
+import '../../styles/Home.css';
 
 export function Home() {
     return (
@@ -12,10 +12,10 @@ export function Home() {
                 <Experience />
             </div>
             <PageMenu titles={['Home', 'Portfolio', 'About']} current='Home' />
-            <div id='socialsContainer'>
+            {/* <div id='socialsContainer'>
                 <SocialLink href='https://github.com/a-binkley' />
                 <SocialLink href='https://linkedin.com/in/adrian-binkley/' />
-            </div>
+            </div> */}
             <div id='issueReporterWrapper'>
                 <p id='issueReporterPrompt'>Something not quite right?</p>
                 <a id='issueReporterLink' href='https://github.com/a-binkley/personal-website/issues' target='_blank' rel='noreferrer'>Report an issue</a>

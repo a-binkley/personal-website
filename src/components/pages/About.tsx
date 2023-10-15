@@ -1,8 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
-import { PageMenu } from '../components';
-import '../styles/pages/About.css';
-import '../fonts/Proxima Nova/stylesheet.css';
+import { AccentTab, PageMenu, SocialLink } from '..';
+import '../../styles/pages/About.css';
 
 export function About() {
     const aboutParagraphs = [
@@ -19,10 +18,12 @@ to be much better aligned with my long-term goals and preference for analytical 
         <>
             <PageMenu titles={['Home', 'Portfolio', 'About']} current='About' />
             <h1 id='about-header'>About me</h1>
-            <div id='about-sep' />
+            <div className='mobile-title-sep' />
             <div id='about-p-wrapper'>
                 {aboutParagraphs.map((pg, index) => <p className='about-p' key={index}>{pg}</p>)}
+                <SocialLink href='https://linkedin.com/in/adrian-binkley/' />
             </div>
+            <AccentTab corner='SE' />
             <Outlet />
         </>
     );

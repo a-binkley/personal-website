@@ -8,10 +8,13 @@ export function SocialLink(props: { href: string; }) {
     };
 
     return (
-        <a href={props.href} target='_blank' rel='noreferrer' style={{ color: '#3f3f3f' }}>
-            <svg id={site} xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='currentColor' className={`bi bi-${props.href}`} viewBox='0 0 16 16'>
-                <path d={svgPaths[site]}/>
-            </svg>
-        </a>
+        <>
+            <p className='social-see-more'>See More:</p>
+            <a href={props.href} target='_blank' rel='noreferrer' className={`social-icon ${site}`}>
+                <svg id={site} xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='currentColor' className={`bi bi-${props.href}`} viewBox='0 0 16 16'>
+                    <path d={svgPaths[site]}/>
+                </svg>
+            </a>
+        </>
     );
 }

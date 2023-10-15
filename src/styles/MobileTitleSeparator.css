@@ -1,0 +1,11 @@
+.mobile-title-sep {
+    position: absolute;
+    content: '';
+    width: 96vw;
+    height: 4px;
+    top: 86px;
+    left: 2vw;
+    background-color: #62c1b1;
+    border-radius: 2px;
+    z-index: -1;
+}

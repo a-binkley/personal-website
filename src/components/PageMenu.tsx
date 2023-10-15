@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { PageTitle } from '../pages';
-import '../styles/PageMenu.css';
 import { useState } from 'react';
+
+import { PageTitle } from './pages';
+import '../styles/PageMenu.css';
 
 export function PageMenu(props: { titles: PageTitle[], current: PageTitle }) {
     const [checked, setChecked] = useState(false);
