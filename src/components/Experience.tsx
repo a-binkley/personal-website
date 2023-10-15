@@ -6,7 +6,7 @@ import '../fonts/Proxima Nova/stylesheet.css';
 
 export function Experience() {
     return (
-        <div id='experienceContainer'>
+        <div id='experience-container'>
             <ExperienceList title='Work Experience' data={workExperience} />
             <div className='separatorLineExperience' />
             <ExperienceList title='Education History' data={schoolExperience} />

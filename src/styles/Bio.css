@@ -2,7 +2,7 @@
     --padding: 10px;
 }
 
-#bioContainer {
+#bio-container {
     max-height: 80vh;
     padding: var(--padding);
     border-radius: 10px;
@@ -12,22 +12,22 @@
     overflow-y: auto;
 }
 
-#bioContainer h1, 
-#bioContainer h2, 
-#bioContainer p {
+#bio-container h1, 
+#bio-container h2, 
+#bio-container p {
     position: relative;
     color: #404040;
     margin: 10px;
     font-family: 'Proxima Nova Rg';
 }
 
-#bioContainer h1, 
-#bioContainer h2 {
+#bio-container h1, 
+#bio-container h2 {
     top: var(--padding);
     left: var(--padding);
 }
 
-#bioContainer h1 {
+#bio-container h1 {
     font-size: 30pt;
     color: #2f2f2f;
 }
@@ -41,13 +41,13 @@
     border-bottom: 1px solid var(--accent-color);
 }
 
-#bioContainer p {
+#bio-container p {
     text-indent: 30px;
     font-size: 18pt;
     margin-bottom: var(--padding);
 }
 
-#bioContainer ol {
+#bio-container ol {
     position: relative;
     left: -40px;
 }
@@ -68,19 +68,22 @@
 
 /* Desktop / landscape-mode tablets */
 @media only screen and (min-width: 1000px) {
-    #bioContainer {
+    #bio-container {
         width: 32vw;
     }
 }
 
 /* Phones and portrait-mode tablets */
 @media only screen and (max-width: 999px) {
-    #bioContainer {
-        top: 10px;
+    #bio-container {
+        display: none;  /* TEMP */
+        position: absolute;
+        top: 40px;
         max-width: 100%;
     }
     
-    #bioContainer h1 {
+    #bio-container h1 {
         margin-bottom: var(--padding);
+        text-align: center;
     }
 }

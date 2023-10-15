@@ -11,16 +11,8 @@ My main areas of expertise are TypeScript, Node.js, Python, and Java. I \
 have experience with and certifications for various cloud technologies, \
 and I'm passionate about exploring the intersections of technology with \
 the arts and humanities.`,
-        `In addition to my full-time work and individual projects in computer \
-science, I maintain a wide range of hobbies including woodworking, Sunfish \
-sailing, kayaking, and 3D printing and painting minifigures for Dungeons & Dragons. \
-While my career is now primarily focused on technology, I studied classical music for \
-15 years preceding this - including obtaining a Bachelor's of Music. I still enjoy and \
-regularly listen to classical music, but I have found the day-to-day work of software engineering \
-to be much better aligned with my long-term goals and preference for analytical thinking.`,  // TODO: move to /about
         `If you're interested in knowing more, you can view my portfolio and a longer biography \
-via the navigation bar on the left. \
-Additionally, you can:`
+via the navigation menu on the left. Additionally, you can:`
     ];
 
     const moreInfoOptions: { iconClass: 'download' | 'envelope', iconPaths: string[], anchor: ReactElement }[] = [
@@ -50,7 +42,7 @@ Additionally, you can:`
     ];
 
     return (
-        <div id='bioContainer'>
+        <div id='bio-container'>
             <h2>Hi there, my name is</h2>
             <h1>Adrian Binkley</h1>
             <div className='separatorLineBio' />

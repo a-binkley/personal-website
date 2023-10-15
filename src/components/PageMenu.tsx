@@ -1,14 +1,26 @@
 import { Link } from 'react-router-dom';
 import { PageTitle } from '../pages';
 import '../styles/PageMenu.css';
+import { useState } from 'react';
 
 export function PageMenu(props: { titles: PageTitle[], current: PageTitle }) {
+    const [checked, setChecked] = useState(false);
+
+    const handleChange = (target: HTMLInputElement) => {
+        setChecked(target.checked);
+    };
+
     return (
-        <div id='pageMenuWrapper'>
-            <ol id='pageMenuList'>
-                {props.titles.map((title) => <MenuPaddle title={title} type={title === props.current ? 'current' : 'other'} key={title} />)}
-            </ol>
-        </div>
+        <>
+            <label id='page-menu-wrapper' className={checked ? 'checked' : 'unchecked'}>
+                <input type='checkbox' onClick={e => handleChange(e.target as HTMLInputElement)} />
+            </label>
+            <aside id='page-menu-list'>
+                <nav>
+                    {props.titles.map((title) => <MenuPaddle title={title} type={title === props.current ? 'current' : 'other'} key={title} />)}
+                </nav>
+            </aside>
+        </>
     );
 }
 
@@ -40,12 +52,16 @@ function MenuPaddle(props: { title: PageTitle, type: 'current' | 'other' }) {
     const target = props.title.toLowerCase();
 
     return (
-        <li className={`pageMenuListItem ${props.type}`}>
-            <Link to={`/${target === 'home' ? '' : target}`} style={{ color: '#3f3f3f' }} className='pageMenuLink'>
+        <div className={`page-menu-list-item ${props.type}`}>
+            <Link 
+                to={`/${target === 'home' ? '' : target}`}
+                className='page-menu-link'
+                onClick={(e) => props.type === 'current' ? e.preventDefault() : null}>
                 <svg id={`paddleIcon${props.title}`} xmlns='http://www.w3.org/2000/svg' className={`bi bi-${info.iconClass}`} viewBox='0 0 16 16'>
                     {info.iconPaths.map((iconPath, index) => <path d={iconPath} key={`paddleIconPath-${index}`} />)}
                 </svg>
+                <label className='paddle-label'>{`> ${props.title}`}</label>
             </Link>
-        </li>
+        </div>
     );
 }
