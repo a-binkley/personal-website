@@ -6,6 +6,7 @@ import '../../styles/pages/Portfolio.css';
 export function Portfolio() {
     return (
         <>
+            <AccentTab corner='NW' desktopOnly={true} />
             <PageMenu titles={['Home', 'Portfolio', 'About']} current='Portfolio' />
             <h1 id='portfolio-header'>Portfolio</h1>
             <div className='mobile-title-sep' />
@@ -13,7 +14,7 @@ export function Portfolio() {
                 <p>Content coming soon!</p>
                 <SocialLink href='https://github.com/a-binkley' />
             </div>
-            <AccentTab corner='SE' />
+            <AccentTab corner='SE' desktopOnly={false} />
             <Outlet />
         </>
     );

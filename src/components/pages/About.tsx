@@ -16,6 +16,7 @@ to be much better aligned with my long-term goals and preference for analytical 
 
     return (
         <>
+            <AccentTab corner='NW' desktopOnly={true} />
             <PageMenu titles={['Home', 'Portfolio', 'About']} current='About' />
             <h1 id='about-header'>About me</h1>
             <div className='mobile-title-sep' />
@@ -23,7 +24,7 @@ to be much better aligned with my long-term goals and preference for analytical 
                 {aboutParagraphs.map((pg, index) => <p className='about-p' key={index}>{pg}</p>)}
                 <SocialLink href='https://linkedin.com/in/adrian-binkley/' />
             </div>
-            <AccentTab corner='SE' />
+            <AccentTab corner='SE' desktopOnly={false} />
             <Outlet />
         </>
     );

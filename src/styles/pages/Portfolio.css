@@ -8,13 +8,13 @@
     position: absolute;
     left: 0;
     height: max-content;
+    font-family: 'Proxima Nova Rg';
     z-index: -1;
 }
 
 #portfolio-header {
     top: 0;
     width: 100vw;
-    font-family: 'Proxima Nova Rg';
     font-size: 40pt;
     color: #333;
     text-align: center;
@@ -23,6 +23,11 @@
 
 #portfolio-body-wrapper {
     top: 80px;
-    width: 100vw;
+    width: calc(100vw - 2 * var(--padding));
     padding: var(--padding);
+}
+
+#portfolio-body-wrapper p {
+    font-size: 14pt;
+    text-align: center;
 }

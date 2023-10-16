@@ -6,9 +6,8 @@
 #about-header,
 #about-p-wrapper {
     position: absolute;
-    left: 0;
     height: max-content;
-    width: 100vw;
+    width: 40vw;
     z-index: -1;
 }
 
@@ -20,6 +19,7 @@
 
 #about-header {
     top: 0;
+    left: 30vw;
     font-size: 40pt;
     text-align: center;
     margin: var(--padding) 0;
@@ -27,10 +27,24 @@
 
 #about-p-wrapper {
     top: 80px;
+    left: calc(30vw - var(--padding));
     padding: var(--padding);
 }
 
 .about-p {
-    font-size: 14pt;
+    font-size: 18pt;
     text-indent: 2.5em;
+}
+
+/* Phones and portrait-mode tablets */
+@media only screen and (max-width: 999px) {
+    #about-header,
+    #about-p-wrapper {
+        left: 0;
+        width: 100vw;
+    }
+
+    .about-p {
+        font-size: 14pt;
+    }
 }

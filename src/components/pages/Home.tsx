@@ -6,7 +6,7 @@ import '../../styles/Home.css';
 export function Home() {
     return (
         <>
-            <AccentTab corner='NW' />
+            <AccentTab corner='NW' desktopOnly={false} />
             <div id='bodySections'>
                 <Bio />
                 <Experience />
@@ -17,7 +17,7 @@ export function Home() {
                 <p id='issueReporterPrompt'>Something not quite right?</p>
                 <a id='issueReporterLink' href='https://github.com/a-binkley/personal-website/issues' target='_blank' rel='noreferrer'>Report an issue</a>
             </div> */}
-            <AccentTab corner='SE' />
+            <AccentTab corner='SE' desktopOnly={false} />
             <Outlet />
         </>
     );

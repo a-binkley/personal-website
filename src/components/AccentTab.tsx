@@ -2,11 +2,11 @@ import CSS from 'csstype';
 
 import '../styles/AccentTab.css';
 
-type TabProps = { corner: 'NW' | 'SE' };
+type TabProps = { corner: 'NW' | 'SE', desktopOnly: boolean };
 
 export function AccentTab(props: TabProps) {
     return (
-        <img src='img/TealTab.png' alt='' style={tabStyleFromProps(props)}/>
+        <img className={props.desktopOnly ? 'desktop' : ''} src='img/TealTab.png' alt='' style={tabStyleFromProps(props)}/>
     );
 }
 
