@@ -1,8 +1,10 @@
-/* :root {
+:root {
     --icon-size: 64px;
     --paddle-ring-scale: 1.3;
     --padding: 10px;
     --container-height: 30vh;
+    --foreground: #333;
+    --background: white;
     --accent-color: #62c1b1;
     --accent-color-muted: #62c1b17f;
     --outline-color: #7f7f7f;
@@ -12,61 +14,76 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 15vw;
-    height: var(--container-height);
-
-    top: calc(50vh - var(--container-height) / 2);
-    left: 0px;
-    border-right: 2px dashed red;
 }
 
-#page-menu-list {
-    list-style: none;
+/* Desktop / landscape-mode tablets */
+@media only screen and (min-width: 1000px) {
+    #page-menu-wrapper {
+        display: none;
+    }
+
+    #page-menu-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: var(--container-height);
+        width: max-content;
+        top: calc(50vh - var(--container-height) / 2);
+        left: 0px;
+
+        list-style: none;
+    }
+
+    .page-menu-list-item::before {
+        content: "";
+        position: absolute;
+        width: 44px;
+        height: calc(var(--icon-size) / 4);
+    
+        left: -44px;
+        top: calc(var(--icon-size) * var(--paddle-ring-scale) * 3 / 8);
+        border-top: 3px solid var(--outline-color);
+        border-bottom: 3px solid var(--outline-color);
+    }
+
+    .page-menu-list-item {
+        position: relative;
+        fill: var(--outline-color);
+        margin: calc(var(--padding) / 2) 0px;
+        left: 20px;
+    
+        width: calc(var(--icon-size) * var(--paddle-ring-scale));
+        height: calc(var(--icon-size) * var(--paddle-ring-scale));
+        border: 4px solid var(--outline-color);
+        border-radius: calc(var(--icon-size) * var(--paddle-ring-scale));
+    }
+
+    .current {
+        background-color: var(--accent-color-muted);
+    }
+
+    .page-menu-list-item:hover {
+        transition: background-color 0.2s;
+        background-color: var(--accent-color);
+    }
+
+    .page-menu-link {
+        position: relative;
+        top: calc(50% - var(--icon-size) / 2);
+        left: calc(var(--icon-size) * (var(--paddle-ring-scale) - 1) / 2 - 1px);
+    }
+    
+    .page-menu-link svg {
+        position: relative;
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
+
+    .paddle-label {
+        display: none;
+    }
 }
-
-.page-menu-list-item::before {
-    content: '';
-    position: absolute;
-    width: 44px;
-    height: calc(var(--icon-size) / 4);
-
-    left: -44px;
-    top: calc(var(--icon-size) * var(--paddle-ring-scale) * 3 / 8);
-    border-top: 3px solid var(--outline-color);
-    border-bottom: 3px solid var(--outline-color);
-}
-
-.page-menu-list-item {
-    position: relative;
-    fill: var(--outline-color);
-    margin: calc(var(--padding) / 2) 0px;
-
-    width: calc(var(--icon-size) * var(--paddle-ring-scale));
-    height: calc(var(--icon-size) * var(--paddle-ring-scale));
-    border: 4px solid var(--outline-color);
-    border-radius: calc(var(--icon-size) * var(--paddle-ring-scale));
-}
-
-.current {
-    background-color: var(--accent-color-muted);
-}
-
-.page-menu-list-item:hover {
-    background-color: var(--accent-color);
-}
-
-.page-menu-link {
-    position: relative;
-    top: calc(50% - var(--icon-size) / 2);
-    left: calc(var(--icon-size) * (var(--paddle-ring-scale) - 1) / 2 - 1px);
-}
-
-.page-menu-link svg {
-    position: relative;
-    width: var(--icon-size);
-    height: var(--icon-size);
-} */
 
 /* Phones and portrait-mode tablets */
 @media only screen and (max-width: 999px) {
@@ -74,9 +91,6 @@
         --bar-width: 64px;
         --bar-height: 10px;
         --hamburger-gap: 10px;
-        --foreground: #333;
-        --background: white;
-        --accent-color: #62c1b1;
         --hamburger-margin: 10px;
         --animation-timing: 0.2s ease-in-out;
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
@@ -189,9 +203,13 @@
         display: none;
     }
 
+    .paddle-label::before {
+        content: "> ";
+    }
+
     .paddle-label {
         color: white;
-        font-family: 'Proxima Nova Rg';
+        font-family: "Proxima Nova Rg";
         font-size: 40pt;
         cursor: pointer;
     }
