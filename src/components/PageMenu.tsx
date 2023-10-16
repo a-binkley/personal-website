@@ -16,7 +16,7 @@ export function PageMenu(props: { titles: PageTitle[], current: PageTitle }) {
             <label id='page-menu-wrapper' className={checked ? 'checked' : 'unchecked'}>
                 <input type='checkbox' onClick={e => handleChange(e.target as HTMLInputElement)} />
             </label>
-            <aside id='page-menu-list'>
+            <aside id='page-menu-list' style={{ minHeight: checked ? '100vh' : '0' }}>
                 <nav>
                     {props.titles.map((title) => <MenuPaddle title={title} type={title === props.current ? 'current' : 'other'} key={title} />)}
                 </nav>

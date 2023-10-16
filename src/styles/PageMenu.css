@@ -162,7 +162,7 @@
         background-color: var(--foreground);
         color: var(--background);
         max-width: 100vw;
-        min-height: 100vh;  /* TODO NEXT: somehow, this is blocking .social-icon clickable links */
+        min-height: 100vh;
     }
 
     #page-menu-list nav {
