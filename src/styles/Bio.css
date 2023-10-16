@@ -76,14 +76,23 @@
 /* Phones and portrait-mode tablets */
 @media only screen and (max-width: 999px) {
     #bio-container {
-        display: none;  /* TEMP */
         position: absolute;
-        top: 40px;
+        top: 0;
+        max-height: 75vh;
         max-width: 100%;
     }
     
     #bio-container h1 {
-        margin-bottom: var(--padding);
+        margin: 0;
         text-align: center;
+        width: calc(100% - 2 * var(--padding));
+    }
+    
+    .separatorLineBio {
+        margin-top: 30px;
+    }
+
+    #bio-container p {
+        font-size: 15pt;
     }
 }

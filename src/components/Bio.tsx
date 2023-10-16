@@ -12,7 +12,7 @@ have experience with and certifications for various cloud technologies, \
 and I'm passionate about exploring the intersections of technology with \
 the arts and humanities.`,
         `If you're interested in knowing more, you can view my portfolio and a longer biography \
-via the navigation menu on the left. Additionally, you can:`
+via the navigation menu. Additionally, you can:`
     ];
 
     const moreInfoOptions: { iconClass: 'download' | 'envelope', iconPaths: string[], anchor: ReactElement }[] = [
