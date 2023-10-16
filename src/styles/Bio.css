@@ -63,7 +63,10 @@
 
 .infoOptionRow .bioLink {
     position: relative;
-    top: -7px;
+    top: -6px;
+    font-family: 'Proxima Nova Rg';
+    font-size: 14pt;
+    text-decoration: none;
 }
 
 /* Desktop / landscape-mode tablets */
