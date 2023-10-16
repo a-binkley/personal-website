@@ -3,22 +3,17 @@
     --accent-color: #62c1b1;
 }
 
-.experienceLbl,
-.experienceListWrapper {
+.experience-label,
+.experience-list-wrapper {
     list-style: none;
 }
 
-.experienceLbl {
-    text-align: center;
-}
-
-#workExperienceLbl,
-#schoolExperienceLbl {
+.experience-label {
     font-family: 'Proxima Nova Rg';
     text-align: center;
 }
 
-.experienceCellContainer::before {
+.experience-cell-container::before {
     content: '';
     background-color: rgb(255, 255, 255);
     position: absolute;
@@ -32,13 +27,13 @@
     transition: background-color 0.2s;
 }
 
-.experienceCellContainer {
+.experience-cell-container {
     position: relative;
     padding-left: 24px;
     padding-right: 20px;
 }
 
-.experienceCellContainer:not(:last-of-type)::after {
+.experience-cell-container:not(:last-of-type)::after {
     width: 3px;
     height: calc(100% + 10px);
     content: '';
@@ -49,24 +44,24 @@
     background-color: var(--accent-color);
 }
 
-.employerLbl,
-.experienceDateLbl, 
-.experienceCityLbl, 
-.experienceRoleLbl,
-.experienceSummaryLbl {
+.employer-label,
+.experience-date-label, 
+.experience-city-label, 
+.experience-role-label,
+.experience-summary-label {
     position: relative;
     font-family: 'Proxima Nova Rg';
     left: 10px;
 }
 
-.employerLbl {
+.employer-label {
     position: relative;
     font-size: 20pt;
     display: inline;
     top: 0px;
 }
 
-.experienceSepPipe {
+.experience-sep-pipe {
     position: relative;
     display: inline-block;
     content: '';
@@ -78,28 +73,28 @@
     background-color: var(--accent-color);
 }
 
-.experienceLocationContainer {
+.experience-location-container {
     position: relative;
 }
 
-.experienceRoleLbl {
+.experience-role-label {
     font-size: 16pt;
     margin: 0px 0px 5px 0px;
 }
 
-.experienceSummaryLbl {
+.experience-summary-label {
     margin: 0px 0px 20px 0px;
     font-size: 18px;
 }
 
 /* Desktop / landscape-mode tablets */
 @media only screen and (min-width: 1000px) {
-    .experienceCellContainer:hover::before {
+    .experience-cell-container:hover::before {
         background-color: var(--accent-color);
     }
 
-    .experienceDateLbl, 
-    .experienceCityLbl {
+    .experience-date-label, 
+    .experience-city-label {
         display: inline;
         font-size: 14pt;
         margin: 5px;
@@ -109,17 +104,17 @@
 
 /* Phones and portrait-mode tablets */
 @media only screen and (max-width: 999px) {
-    .experienceLbl {
+    .experience-label {
         top: 10px;
         text-align: center;
     }
 
-    .experienceSepPipe {
+    .experience-sep-pipe {
         display: none;
     }
 
-    .experienceDateLbl, 
-    .experienceCityLbl {
+    .experience-date-label, 
+    .experience-city-label {
         font-size: 14pt;
         margin: 5px 0px;
     }

@@ -2,13 +2,12 @@ import { EducationalDetails, ProfessionalDetails, isProfessionalDetail, schoolEx
 
 import '../styles/Experience.css';
 import '../styles/ExperienceList.css';
-import '../fonts/Proxima Nova/stylesheet.css';
 
 export function Experience() {
     return (
-        <div id='experienceContainer'>
+        <div id='experience-container'>
             <ExperienceList title='Work Experience' data={workExperience} />
-            <div className='separatorLineExperience' />
+            <div className='separator-line-experience' />
             <ExperienceList title='Education History' data={schoolExperience} />
         </div>
     );
@@ -17,21 +16,21 @@ export function Experience() {
 function ExperienceList(props: { title: string, data: ProfessionalDetails[] |  EducationalDetails[] }) {
     return (
         <>
-            <h1 className='experienceLbl'>{props.title}</h1>
-            <ul className='experienceListWrapper'>
+            <h1 className='experience-label'>{props.title}</h1>
+            <ul className='experience-list-wrapper'>
                 {props.data.map((instance) => {
                     const site = isProfessionalDetail(instance) ? instance.employer : instance.school;
 
                     return (
-                        <li className='experienceCellContainer' key={site}>
-                            <div className='experienceLocationContainer'>
-                                <h2 className='employerLbl'>{site}</h2>
-                                <div className='experienceSepPipe' />
-                                <h4 className='experienceDateLbl'>{`${instance.fromDate} - ${instance.toDate}`}</h4>
-                                <h5 className='experienceCityLbl' style={{ color: '#7f7f7f' }}>{instance.city}</h5>
-                                <h6 className='experienceRoleLbl'>{instance.role}</h6>
+                        <li className='experience-cell-container' key={site}>
+                            <div className='experience-location-container'>
+                                <h2 className='employer-label'>{site}</h2>
+                                <div className='experience-sep-pipe' />
+                                <h4 className='experience-date-label'>{`${instance.fromDate} - ${instance.toDate}`}</h4>
+                                <h5 className='experience-city-label' style={{ color: '#7f7f7f' }}>{instance.city}</h5>
+                                <h6 className='experience-role-label'>{instance.role}</h6>
                             </div>
-                            <p className='experienceSummaryLbl'>{instance.summary}</p>
+                            <p className='experience-summary-label'>{instance.summary}</p>
                         </li>
                     );
                 })}

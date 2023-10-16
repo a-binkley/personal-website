@@ -1,0 +1,19 @@
+.mobile-title-sep {
+    position: absolute;
+    content: '';
+    width: 40vw;
+    height: 4px;
+    top: 86px;
+    left: 30vw;
+    background-color: #62c1b1;
+    border-radius: 2px;
+    z-index: -1;
+}
+
+/* Phones and portrait-mode tablets */
+@media only screen and (max-width: 999px) {
+    .mobile-title-sep {
+        width: 96vw;
+        left: 2vw;
+    }
+}

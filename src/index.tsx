@@ -1,7 +1,10 @@
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import { About, Home, NotFound, Portfolio } from './pages';
+import { About, Home, NotFound, Portfolio } from './components/pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import './index.css';
+import './styles/MobileTitleSeparator.css';
+import './fonts/Proxima Nova/stylesheet.css';
 
 export default function App() {
   return (

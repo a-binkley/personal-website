@@ -4,7 +4,7 @@
     --accent-color: #62c1b1;
 }
 
-#experienceContainer {
+#experience-container {
     max-height: 80vh;
     padding: var(--padding);
     background: transparent;
@@ -12,7 +12,7 @@
     overflow-x: hidden;
 }
 
-.separatorLineExperience {
+.separator-line-experience {
     position: relative;
     width: 90%;
     height: 2px;
@@ -24,14 +24,15 @@
 
 /* Desktop / landscape-mode tablets */
 @media only screen and (min-width: 1000px) {
-    #experienceContainer {
+    #experience-container {
         width: 32vw;
     }
 }
 
 /* Phones and portrait-mode tablets */
 @media only screen and (max-width: 999px) {
-    #experienceContainer {
+    #experience-container {
+        display: none;  /* TEMP */
         max-width: 100%;
         margin-bottom: calc(var(--icon-size) + 2 * var(--padding));
     }

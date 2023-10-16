@@ -1,7 +1,30 @@
+.social-see-more,
+.social-icon {
+    color: #333;
+}
+
+.social-see-more {
+    font-family: 'Proxima Nova Rg';
+    font-weight: bold;
+    font-size: 14pt;
+    width: 100%;
+    margin: 30px 0 10px 0;
+    text-align: center;
+}
+
+.social-icon {
+    position: relative;
+    display: inline-block;
+    height: 64px;
+    width: 64px;
+    left: calc(50% - 32px);
+    cursor: pointer;
+}
+
 svg:hover {
     transition: fill 0.3s;
 }
 
-#github:hover { fill: #bbbbbb }
+.github svg:hover { fill: #aaa }
 
-#linkedin:hover { fill: #0a66c2 }
+.linkedin svg:hover { fill: #0a66c2 }
