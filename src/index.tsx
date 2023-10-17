@@ -48,7 +48,7 @@ export default function App() {
           }).catch((err) => err);
 
           if (repoResponse.status !== 200) {
-            console.error(`Unable to fetch portfolio data for repository ${repo.name} (error ${repoResponse.status}). ${repoResponse.data}`);
+            if (repoResponse.status !== 404) console.error(`Unable to fetch portfolio data for repository ${repo.name} (error ${repoResponse.status}). ${repoResponse.data}`);
           } else if (Array.isArray(repoResponse.data) || repoResponse.data.type !== 'file') {
             console.error(`Unable to parse portfolio-tags.json for repository ${repo.name}`);
           } else {
