@@ -1,4 +1,5 @@
 {
     "title": "Personal Website",
-    "tagline": "self-referential!"
+    "tagline": "self-referential!",
+    "bootstrapIcon": "globe2"
 }

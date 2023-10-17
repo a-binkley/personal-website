@@ -14,6 +14,7 @@ export type PortfolioData = {
   title: string;
   tagline: string;
   lastModified: string;
+  bootstrapIcon: string;
   url: string;
 };
 
@@ -51,11 +52,12 @@ export default function App() {
             console.error(`Unable to parse portfolio-tags.json for repository ${repo.name}`);
           } else {
             // Parse portfolio tag data and add to array
-            const { title, tagline } = JSON.parse(Buffer.from(repoResponse.data.content, 'base64').toString());
+            const { title, tagline, bootstrapIcon } = JSON.parse(Buffer.from(repoResponse.data.content, 'base64').toString());
             data.push({
               title,
               tagline,
               lastModified: repo.updated_at ? moment(repo.updated_at).format('ll') : 'No data',
+              bootstrapIcon,
               url: repo.html_url
             });
           }
