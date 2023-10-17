@@ -14,6 +14,7 @@ export type PortfolioData = {
   title: string;
   tagline: string;
   lastModified: string;
+  url: string;
 };
 
 export default function App() {
@@ -54,7 +55,8 @@ export default function App() {
             data.push({
               title,
               tagline,
-              lastModified: repo.updated_at ? moment(repo.updated_at).format('ll') : 'No data'
+              lastModified: repo.updated_at ? moment(repo.updated_at).format('ll') : 'No data',
+              url: repo.html_url
             });
           }
         }
