@@ -40,12 +40,12 @@ export default function App() {
         const data: PortfolioData[] = [];
 
         // Check for repositories with a portfolio-tags.json and save those to render on Portfolio route
-        for (const repo of repos.data.slice(4, 6)) {  // STUB
+        for (const repo of repos.data) {  // STUB
           const repoResponse = await client.request('GET /repos/{owner}/{repo}/contents/{path}', {
             owner: 'a-binkley',
             repo: repo.name,
             path: 'portfolio-tags.json'
-          });
+          }).catch((err) => err);
 
           if (repoResponse.status !== 200) {
             console.error(`Unable to fetch portfolio data for repository ${repo.name} (error ${repoResponse.status}). ${repoResponse.data}`);
@@ -54,14 +54,17 @@ export default function App() {
           } else {
             // Parse portfolio tag data and add to array
             const { title, tagline, bootstrapIcon, iconPaths } = JSON.parse(Buffer.from(repoResponse.data.content, 'base64').toString());
-            data.push({
-              title,
-              tagline,
-              lastModified: repo.updated_at ? moment(repo.updated_at).format('ll') : 'No data',
-              bootstrapIcon,
-              iconPaths,
-              url: repo.html_url
-            });
+            if (!title || !tagline || !bootstrapIcon || !iconPaths) console.error(`Missing information from portfolio-tags.json for repository ${repo.name}`);
+            else {
+              data.push({
+                title,
+                tagline,
+                lastModified: repo.updated_at ? moment(repo.updated_at).format('ll') : 'No data',
+                bootstrapIcon,
+                iconPaths,
+                url: repo.html_url
+              });
+            }
           }
         }
 

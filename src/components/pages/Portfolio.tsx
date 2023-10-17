@@ -17,7 +17,7 @@ export function Portfolio(props: { data: PortfolioData[] | null }) {
                         return (
                             <Link to={url} className='portfolio-project' key={index}>
                                 <svg className={`bi bi-${bootstrapIcon} portfolio-icon`} xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='currentColor' viewBox='0 0 16 16'>
-                                    {iconPaths.map((iconPath) => <path d={iconPath} />)}
+                                    {iconPaths.map((iconPath, pathIndex) => <path d={iconPath} key={`portfolio-icon-path-${pathIndex}`} />)}
                                 </svg>
                                 <h2 className='portfolio-project-title'>{title}</h2>
                                 <h3 className='portfolio-project-tagline'>{tagline}</h3>
