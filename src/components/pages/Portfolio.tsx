@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import { AccentTab, PageMenu, SocialLink } from '..';
+import { AccentTab, PageMenu, PortfolioItem, SocialLink } from '..';
 import '../../styles/pages/Portfolio.css';
 import { PortfolioData } from '../..';
 
@@ -13,18 +13,7 @@ export function Portfolio(props: { data: PortfolioData[] | null }) {
             <div className='mobile-title-sep' />
             <div id='portfolio-body-wrapper'>
                 {props.data ? <div id='portfolio-data-wrapper'>
-                    {props.data.map(({ title, tagline, lastModified, bootstrapIcon, iconPaths, url }, index) => {
-                        return (
-                            <a href={url} className='portfolio-project' target='_blank' rel='noreferrer' key={index}>
-                                <svg className={`bi bi-${bootstrapIcon} portfolio-icon`} xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='currentColor' viewBox='0 0 16 16'>
-                                    {iconPaths.map((iconPath, pathIndex) => <path d={iconPath} key={`portfolio-icon-path-${pathIndex}`} />)}
-                                </svg>
-                                <h2 className='portfolio-project-title'>{title}</h2>
-                                <h3 className='portfolio-project-tagline'>{tagline}</h3>
-                                <h4 className='portfolio-project-modified'>{lastModified}</h4>
-                            </a>
-                        );
-                    })}
+                    {props.data.map((item, index) => <PortfolioItem {...item} key={`portfolio-item-${index}`} />)}
                 </div> : <p>Fetching content...</p>}
                 <SocialLink href='https://github.com/a-binkley' />
             </div>

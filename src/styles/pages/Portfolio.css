@@ -31,3 +31,19 @@
     font-size: 14pt;
     text-align: center;
 }
+
+#portfolio-data-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    gap: 10px;
+    
+    top: 28px;
+    left: 20vw;
+    width: 60vw;
+
+    border: 2px dashed red;
+}
