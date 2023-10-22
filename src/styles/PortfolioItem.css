@@ -1,0 +1,82 @@
+:root {
+    --padding: 10px;
+    --foreground: #333;
+    --secondary: #666;
+    --background: #ffffffe0;
+    --accent-color-secondary: #444455;
+}
+
+.portfolio-icon,
+.portfolio-item-info-wrapper,
+.portfolio-item-title,
+.portfolio-item-tagline,
+.portfolio-item-modified {
+    position: absolute;
+    margin: 0;
+}
+
+.portfolio-item-title,
+.portfolio-item-tagline,
+.portfolio-item-modified {
+    width: calc(100% - var(--padding));
+    padding-left: var(--padding);
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+    height: 240px;
+    width: 300px;
+    text-decoration: none;
+}
+
+.portfolio-item-wrapper:hover .portfolio-icon {
+    top: 0;
+}
+
+.portfolio-icon {
+    fill: var(--accent-color-secondary);
+    height: 200px;
+    width: 200px;
+    top: 20px;
+    left: 50px;
+    transition: top 0.4s ease-in-out;
+}
+
+.portfolio-item-info-wrapper {
+    top: 100px;
+    height: 140px;
+    width: 100%;
+    background: var(--background);
+    box-shadow: 0px 8px 20px 0px #00000030;
+}
+
+.portfolio-item-title {
+    top: var(--padding);
+    height: 40px;
+    font-size: 18pt;
+    color: var(--foreground);
+}
+
+.portfolio-item-tagline {
+    top: 45px;
+    height: 60px;
+
+    font-size: 14pt;
+    color: var(--secondary);
+}
+
+.portfolio-item-modified {
+    top: 100px;
+    font-size: 12pt;
+    color: var(--secondary);
+}
+
+/* Phones and portrait-mode tablets */
+@media only screen and (max-width: 999px) {
+    .portfolio-item-wrapper {
+        position: relative;
+        height: 240px;
+        width: 300px;
+        text-decoration: none;
+    }
+}

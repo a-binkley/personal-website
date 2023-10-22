@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
 
-import { AccentTab, PageMenu, SocialLink } from '..';
+import { AccentTab, PageMenu, PortfolioItem, SocialLink } from '..';
 import '../../styles/pages/Portfolio.css';
+import { PortfolioData } from '../..';
 
-export function Portfolio() {
+export function Portfolio(props: { data: PortfolioData[] | null }) {
     return (
         <>
             <AccentTab corner='NW' desktopOnly={true} />
@@ -11,7 +12,10 @@ export function Portfolio() {
             <h1 id='portfolio-header'>Portfolio</h1>
             <div className='mobile-title-sep' />
             <div id='portfolio-body-wrapper'>
-                <p>Content coming soon!</p>
+                {props.data ? <div id='portfolio-data-wrapper'>
+                    {props.data.map((item, index) => <PortfolioItem {...item} key={`portfolio-item-${index}`} />)}
+                </div> : <p>Fetching content...</p>}
+                <br />
                 <SocialLink href='https://github.com/a-binkley' />
             </div>
             <AccentTab corner='SE' desktopOnly={false} />

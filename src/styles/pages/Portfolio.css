@@ -31,3 +31,33 @@
     font-size: 14pt;
     text-align: center;
 }
+
+#portfolio-data-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    gap: 10px;
+    
+    top: 28px;
+    left: 25vw;
+    width: calc(50vw - 2 * var(--padding));
+
+    /* border: 2px dashed red; */
+}
+
+/* Phones and portrait-mode tablets */
+@media only screen and (max-width: 999px) {
+    #portfolio-body-wrapper {
+        top: 80px;
+        width: 100vw;
+        padding: var(--padding);
+    }
+    
+    #portfolio-data-wrapper {
+        left: 0;
+        width: 100%;
+    }
+}
