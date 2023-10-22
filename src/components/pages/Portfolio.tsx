@@ -15,6 +15,7 @@ export function Portfolio(props: { data: PortfolioData[] | null }) {
                 {props.data ? <div id='portfolio-data-wrapper'>
                     {props.data.map((item, index) => <PortfolioItem {...item} key={`portfolio-item-${index}`} />)}
                 </div> : <p>Fetching content...</p>}
+                <br />
                 <SocialLink href='https://github.com/a-binkley' />
             </div>
             <AccentTab corner='SE' desktopOnly={false} />

@@ -36,14 +36,14 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     align-content: flex-start;
     gap: 10px;
     
     top: 28px;
-    left: 20vw;
-    width: 60vw;
+    left: 25vw;
+    width: calc(50vw - 2 * var(--padding));
 
     /* border: 2px dashed red; */
 }

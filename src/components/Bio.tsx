@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export function Bio() {
     const description = [
         `I am a software engineer based in the greater Philadelphia area. \
-My main areas of expertise are TypeScript, Node.js, Python, and Java. I \
+My main areas of expertise are TypeScript, React.js, Node.js, Python, and Java. I \
 have experience with and certifications for various cloud technologies, \
 and I'm passionate about exploring the intersections of technology with \
 the arts and humanities.`,

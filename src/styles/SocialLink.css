@@ -1,5 +1,6 @@
 .social-see-more,
 .social-icon {
+    position: relative;
     color: #333;
 }
 
@@ -13,7 +14,6 @@
 }
 
 .social-icon {
-    position: relative;
     display: inline-block;
     height: 64px;
     width: 64px;
