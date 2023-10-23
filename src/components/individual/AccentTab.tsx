@@ -10,7 +10,7 @@ export function AccentTab(props: TabProps) {
     );
 }
 
-function tabStyleFromProps(props: TabProps): CSS.Properties {
+export function tabStyleFromProps(props: TabProps): CSS.Properties {
     if (props.corner === 'NW') return {};
 
     const transformSE = 'rotate(180deg) scale(0.5) translate(-50%, -50%)';
