@@ -13,7 +13,7 @@ export function Experience() {
     );
 }
 
-function ExperienceList(props: { title: string, data: ProfessionalDetails[] |  EducationalDetails[] }) {
+export function ExperienceList(props: { title: string, data: ProfessionalDetails[] |  EducationalDetails[] }) {
     return (
         <>
             <h1 className='experience-label'>{props.title}</h1>

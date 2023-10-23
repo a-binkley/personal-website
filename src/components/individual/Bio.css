@@ -32,7 +32,7 @@
     color: #2f2f2f;
 }
 
-.separatorLineBio {
+.separator-line-bio {
     position: relative;
     width: 100%;
     height: 2px;
@@ -52,16 +52,16 @@
     left: -40px;
 }
 
-.infoOptionRow {
+.info-option-row {
     list-style-type: none;
     margin-bottom: 5px;
 }
 
-.infoOptionRow svg {
+.info-option-row svg {
     margin: 5px var(--padding) 0px 10px;
 }
 
-.infoOptionRow .bioLink {
+.info-option-row .bio-link {
     position: relative;
     top: -6px;
     font-family: 'Proxima Nova Rg';
@@ -91,7 +91,7 @@
         width: calc(100% - 2 * var(--padding));
     }
     
-    .separatorLineBio {
+    .separator-line-bio {
         margin-top: 30px;
     }
 
