@@ -1,7 +1,7 @@
-import './Bio.css';
-
 import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
+
+import './Bio.css';
 
 export const paragraphStrings = [
     `I am a software engineer based in the greater Philadelphia area. \
