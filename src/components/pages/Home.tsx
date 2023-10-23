@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { AccentTab, Bio, Experience, PageMenu } from '..';
+import { AccentTab, Bio, Experience, PageMenu } from '../individual';
 
-import '../../styles/Home.css';
+import './Home.css';
 
 export function Home() {
     return (

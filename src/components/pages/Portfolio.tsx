@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
-import { AccentTab, PageMenu, PortfolioItem, SocialLink } from '..';
-import '../../styles/pages/Portfolio.css';
+import { AccentTab, PageMenu, PortfolioItem, SocialLink } from '../individual';
+import './Portfolio.css';
 import { PortfolioData } from '../..';
 
 export function Portfolio(props: { data: PortfolioData[] | null }) {

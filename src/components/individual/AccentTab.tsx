@@ -1,6 +1,6 @@
 import CSS from 'csstype';
 
-import '../styles/AccentTab.css';
+import './AccentTab.css';
 
 type TabProps = { corner: 'NW' | 'SE', desktopOnly: boolean };
 

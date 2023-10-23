@@ -1,5 +1,4 @@
-import '../styles/Bio.css';
-import '../fonts/Proxima Nova/stylesheet.css';
+import './Bio.css';
 
 import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';

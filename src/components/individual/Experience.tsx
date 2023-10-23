@@ -1,7 +1,7 @@
-import { EducationalDetails, ProfessionalDetails, isProfessionalDetail, schoolExperience, workExperience } from '../ExperienceData';
+import { EducationalDetails, ProfessionalDetails, isProfessionalDetail, schoolExperience, workExperience } from '../../ExperienceData';
 
-import '../styles/Experience.css';
-import '../styles/ExperienceList.css';
+import './Experience.css';
+import './ExperienceList.css';
 
 export function Experience() {
     return (

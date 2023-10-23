@@ -1,4 +1,4 @@
-import '../styles/SocialLink.css';
+import './SocialLink.css';
 
 export function SocialLink(props: { href: string; }) {
     const site = props.href.split('/')[2].slice(0, -4);

@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
-import { AccentTab, PageMenu, SocialLink } from '..';
-import '../../styles/pages/About.css';
+import { AccentTab, PageMenu, SocialLink } from '../individual';
+import './About.css';
 
 export function About() {
     const aboutParagraphs = [

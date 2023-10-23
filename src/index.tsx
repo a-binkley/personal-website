@@ -7,7 +7,7 @@ import moment from 'moment';
 
 import { About, Home, NotFound, Portfolio } from './components/pages';
 import './index.css';
-import './styles/MobileTitleSeparator.css';
+import './components/individual/MobileTitleSeparator.css';
 import './fonts/Proxima Nova/stylesheet.css';
 
 export type PortfolioData = {
