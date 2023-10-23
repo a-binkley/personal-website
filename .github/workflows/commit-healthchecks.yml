@@ -1,11 +1,10 @@
-name: Style Check
+name: Commit Healthchecks
 
 on:
   push:
     branches-ignore:
     - 'main'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   style-check:
     runs-on: ubuntu-latest
@@ -16,3 +15,12 @@ jobs:
         run: npm i
       - name: Run Lint Check
         run: npm run lint
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out commit
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: npm i
+      - name: Run Unit Tests
+        run: npm test
