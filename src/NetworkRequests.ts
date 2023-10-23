@@ -6,7 +6,7 @@ import { PortfolioData } from '.';
  * @param client the {@link Octokit} client used to make API calls
  * @param callback the callback function to execute using {@link parsePortfolioTags()}. Intended to be a React state setter function
  */
-export async function fetchGitHubData(client: Octokit, callback: Function) {
+export async function fetchGitHubData(client: Octokit, callback: (data: PortfolioData[]) => void) {
     // Retrieve all public repositories for a-binkley
     const repos = await client.request('GET /users/{username}/repos', { username: 'a-binkley' });
     
@@ -24,7 +24,7 @@ export async function fetchGitHubData(client: Octokit, callback: Function) {
 
         callback(await parsePortfolioTags(client, repoInfo));
     }
-};
+}
 
 /** Parse information from portfolio-tags.json for each relevant public repository.
  * Helper function for {@link fetchGitHubData()}

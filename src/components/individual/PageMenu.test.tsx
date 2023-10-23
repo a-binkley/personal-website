@@ -55,7 +55,7 @@ describe('Menu Paddle component rendering', () => {
     it('should prevent default Link action if selecting current page', () => {
         const clickHandlerCurrent = testComponentCurrent.root.findByType(Link).props.onClick;
         const clickHandlerOther = testComponentOther.root.findByType(Link).props.onClick;
-        const mockEvent: Partial<React.MouseEvent<HTMLAnchorElement, MouseEvent>> = { preventDefault: () => {} };
+        const mockEvent: Partial<React.MouseEvent<HTMLAnchorElement, MouseEvent>> = { preventDefault: () => { return {} } };
         
         expect(clickHandlerCurrent(mockEvent)).not.toBeNull();
         expect(clickHandlerOther()).toBeNull();

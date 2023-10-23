@@ -32,6 +32,7 @@ module.exports = {
     ],
     'root': true,
     'rules': {
+        '@typescript-eslint/ban-ts-comment': 'off',
         'react/react-in-jsx-scope': 'off'
     }
 }
