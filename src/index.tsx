@@ -71,6 +71,7 @@ export default function App() {
           // Parse portfolio tag data and add to array
           const { title, tagline, bootstrapIcon, iconPaths } = JSON.parse(Buffer.from(repoResponse.data.content, 'base64').toString());
           if (!title || !tagline || !bootstrapIcon || !iconPaths) console.error(`Missing information from portfolio-tags.json for repository ${repo.name}`);
+          else if (new URL(repo.html_url).protocol !== 'https:') console.error(`Protocol for returned URL "${repo.html_url}" is not HTTPS, and is possibly vulnerable`);
           else {
             data.push({
               title,
