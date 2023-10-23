@@ -3,17 +3,17 @@ import { Outlet } from 'react-router-dom';
 import { AccentTab, PageMenu, SocialLink } from '../individual';
 import './About.css';
 
-export function About() {
-    const aboutParagraphs = [
-        `In addition to my full-time work and individual projects in computer \
+const aboutParagraphs = [
+    `In addition to my full-time work and individual projects in computer \
 science, I maintain a wide range of hobbies including Sunfish sailing, kayaking, \
 3D printing and painting minifigures for Dungeons & Dragons, and woodworking.`,
-        `While my career is now primarily focused on technology, I studied classical music for \
+    `While my career is now primarily focused on technology, I studied classical music for \
 15 years preceding this - including obtaining a Bachelor's of Music. I still enjoy and \
 regularly listen to classical music, but I have found the day-to-day work of software engineering \
 to be much better aligned with my long-term goals and preference for analytical thinking.`
-    ];
+];
 
+export function About() {
     return (
         <>
             <AccentTab corner='NW' desktopOnly={true} />
