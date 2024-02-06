@@ -1,4 +1,4 @@
-import '../styles/PortfolioItem.css';
+import './PortfolioItem.css';
 
 export function PortfolioItem(props: { title: string, tagline: string, lastModified: string, bootstrapIcon: string, iconPaths: string[], url: string }) {
     return (
