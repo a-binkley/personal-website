@@ -37,7 +37,7 @@
     ]
   },
   "jest": {
-    "collectCoverageFrom": ["./src/components/**"],
+    "collectCoverageFrom": ["./src/**"],
     "coverageThreshold": {
       "global": {
         "statements": 90,

@@ -4,7 +4,8 @@ import { PortfolioData } from '.';
 
 /** Fetch repository info for portfolio page
  * @param client the {@link Octokit} client used to make API calls
- * @param callback the callback function to execute using {@link parsePortfolioTags()}. Intended to be a React state setter function
+ * @param callback the callback function to execute using {@link parsePortfolioTags()}. 
+ * Intended to be a React state setter function, but can be something else if desired
  */
 export async function fetchGitHubData(client: Octokit, callback: (data: PortfolioData[]) => void) {
     // Retrieve all public repositories for a-binkley

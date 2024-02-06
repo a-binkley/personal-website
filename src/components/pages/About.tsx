@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { AccentTab, PageMenu, SocialLink } from '../individual';
 import './About.css';
 
-const aboutParagraphs = [
+export const aboutParagraphs = [
     `In addition to my full-time work and individual projects in computer \
 science, I maintain a wide range of hobbies including Sunfish sailing, kayaking, \
 3D printing and painting minifigures for Dungeons & Dragons, and woodworking.`,
