@@ -3,7 +3,7 @@ import { Octokit } from 'octokit';
 
 import { fetchGitHubData, parsePortfolioTags } from './NetworkRequests';
 
-const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => '');
 
 const responseBase = {
 	headers: {},
