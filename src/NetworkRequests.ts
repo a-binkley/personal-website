@@ -1,5 +1,4 @@
 import { Buffer } from 'buffer';
-import moment from 'moment';
 import { Octokit } from 'octokit';
 
 import { PortfolioData } from '.';
@@ -57,7 +56,7 @@ export async function parsePortfolioTags(
 						console.error(`Unable to parse portfolio-tags.json for repository ${repo.name}`);
 					} else {
 						// Parse portfolio tag data and add to array
-						const { title, tagline, bootstrapIcon, iconPaths } = JSON.parse(
+						const { title, tagline, url, bootstrapIcon, iconPaths } = JSON.parse(
 							Buffer.from(response.data.content, 'base64').toString()
 						);
 
@@ -69,10 +68,10 @@ export async function parsePortfolioTags(
 							data.push({
 								title,
 								tagline,
-								lastModified: repo.updated_at ? moment(repo.updated_at).format('ll') : 'No data',
+								lastModified: repo.updated_at ?? '(no data)',
 								bootstrapIcon,
 								iconPaths,
-								url: repo.html_url
+								url: url ?? repo.html_url
 							});
 						}
 					}
@@ -88,5 +87,5 @@ export async function parsePortfolioTags(
 			);
 	}
 
-	return data;
+	return data.sort((a, b) => b.lastModified.localeCompare(a.lastModified));
 }

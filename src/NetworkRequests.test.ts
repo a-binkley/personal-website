@@ -1,4 +1,3 @@
-import moment from 'moment';
 import { Octokit } from 'octokit';
 
 import { fetchGitHubData, parsePortfolioTags } from './NetworkRequests';
@@ -55,7 +54,7 @@ describe('fetchGitHubData function', () => {
 		expect(testCallbackFunction).toHaveBeenCalledWith([
 			{
 				...testContent,
-				lastModified: moment(testRepoData.updated_at).format('ll'),
+				lastModified: testRepoData.updated_at,
 				url: testRepoData.html_url
 			}
 		]);
@@ -168,20 +167,38 @@ describe('parsePortfolioTags function', () => {
 			bootstrapIcon: 'asdf',
 			iconPaths: 'asdf'
 		};
-		mockRequest.mockResolvedValue({
+		mockRequest.mockResolvedValueOnce({
 			...responseBase,
 			status: 200,
-			data: { type: 'file', content: btoa(JSON.stringify(testContent)) }
+			data: { type: 'file', content: btoa(JSON.stringify({ ...testContent, url: 'https://test.com/' })) }
 		});
-		expect(await parsePortfolioTags(octokit, [testRepoData, { ...testRepoData, updated_at: undefined }])).toStrictEqual([
+		for (let i = 0; i < 2; i++) {
+			mockRequest.mockResolvedValueOnce({
+				...responseBase,
+				status: 200,
+				data: { type: 'file', content: btoa(JSON.stringify(testContent)) }
+			});
+		}
+		expect(
+			await parsePortfolioTags(octokit, [
+				testRepoData,
+				{ ...testRepoData, updated_at: undefined },
+				{ ...testRepoData, updated_at: '2004-01-01T00:00:00+0000' }
+			])
+		).toStrictEqual([
 			{
 				...testContent,
-				lastModified: moment(testRepoData.updated_at).format('ll'),
+				lastModified: '2004-01-01T00:00:00+0000',
 				url: testRepoData.html_url
 			},
 			{
 				...testContent,
-				lastModified: 'No data',
+				lastModified: testRepoData.updated_at,
+				url: 'https://test.com/'
+			},
+			{
+				...testContent,
+				lastModified: '(no data)',
 				url: testRepoData.html_url
 			}
 		]);
