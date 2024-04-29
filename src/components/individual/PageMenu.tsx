@@ -69,6 +69,7 @@ export function MenuPaddle(props: { title: PageTitle; type: 'current' | 'other' 
 		<div className={`page-menu-list-item ${props.type}`}>
 			<Link
 				to={`/${target === 'home' ? '' : target}`}
+				title={target}
 				className='page-menu-link'
 				onClick={(e) => (props.type === 'current' ? e.preventDefault() : null)}
 			>

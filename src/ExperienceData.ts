@@ -1,7 +1,7 @@
 type GeneralDetails = {
 	city: string;
 	role: string;
-	summary: string;
+	summary?: string;
 	fromDate: string;
 	toDate: string;
 };
@@ -25,8 +25,9 @@ export const workExperience: ProfessionalDetails[] = [
 		role: 'Software Engineer II',
 		fromDate: 'Dec 2023',
 		toDate: 'Present',
-		summary: `Architecting and implementing company-wide GL traceability/automation pipeline, \
-continuing management of team CI/CD projects, and training junior developers`
+		summary: `Orchestrated a general ledger drilldown and transaction processing module responsible \
+for almost $8 trillion of funds and assets. Architected and implemented an automated testing tool used \
+department-wide with Cypress and GitHub Actions, eliminating over 100 hours of yearly manual work`
 	},
 	{
 		employer: 'The Vanguard Group',
@@ -34,8 +35,9 @@ continuing management of team CI/CD projects, and training junior developers`
 		role: 'Software Engineer I',
 		fromDate: 'May 2022',
 		toDate: 'Dec 2023',
-		summary: `Modernized data integrations in AWS, managed team automation projects and CI/CD systems \
-migrations, created and updated ERP reports through Oracle Cloud IaaS`
+		summary: `Modernized data integrations in AWS, managed team automation and CI/CD system projects, \
+created and updated ERP reports through Oracle Cloud IaaS and SaaS applications. Co-created an internal NPM \
+library facilitating networking, visibility, and authorization for cross-cloud workflow`
 	},
 	{
 		employer: 'eBay Inc.',
@@ -43,18 +45,9 @@ migrations, created and updated ERP reports through Oracle Cloud IaaS`
 		role: 'Software Engineer Intern',
 		fromDate: 'May 2021',
 		toDate: 'Aug 2021',
-		summary: `Researched, developed, and integrated a full-stack live streaming service POC \
-application using Node.js, RESTful APIs, and a custom Java/Spring Boot backend`
+		summary: `Researched, developed, and integrated a full-stack live streaming service POC application \
+for the eBay Storefront using Node.js, RESTful APIs, and a Spring Boot backend`
 	}
-	// 	, {
-	//         employer: 'The University of Pennsylvania',
-	//         city: 'Philadelphia, PA',
-	//         role: 'Teaching Assistant',
-	//         fromDate: 'Sep 2020',
-	//         toDate: 'May 2022',
-	//         summary: `Co-led weekly discussion groups, hosted weekly office hours, and guided subject agendas \
-	// for graduate-level courses on data structures, algorithms, and systems programming`
-	//     }
 ];
 
 export const schoolExperience: EducationalDetails[] = [
@@ -63,17 +56,13 @@ export const schoolExperience: EducationalDetails[] = [
 		city: 'Philadelphia, PA',
 		role: "Master's Degree in Computer & Information Technology",
 		fromDate: 'Sep 2020',
-		toDate: 'May 2022',
-		summary: `Relevant coursework in data analytics, databases, artificial intelligence, data structures, \
-algorithms, advanced mathematics, and computer systems`
+		toDate: 'May 2022'
 	},
 	{
 		school: 'The Curtis Institute of Music',
 		city: 'Philadelphia, PA',
 		role: "Bachelor's Degree in Music Performance",
 		fromDate: 'Sep 2016',
-		toDate: 'May 2020',
-		summary: `Focus in Pipe Organ studies, Certificate in Harpsichord Performance. Additional coursework \
-in computer science and psychology`
+		toDate: 'May 2020'
 	}
 ];
