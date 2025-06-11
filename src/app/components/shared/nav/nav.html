@@ -1,7 +1,7 @@
-<div id="nav-wrapper">
+<nav id="nav-wrapper" role="navigation">
   @for (item of navItems; track item) {
   <a href="/{{ item | lowercase }}" [ngClass]="{'selected': current === item}"
     >{{ item | uppercase }}</a
   >
   }
-</div>
+</nav>
