@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+$accent-color: rgb(45, 115, 206);
+$gutter-width: 40px;
+$nav-bg: rgba(100, 100, 100, 0.5);
+$page-text: 1.8em;
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
