@@ -1,0 +1,20 @@
+$headshot-size: 256px;
+
+#business-card-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: white;
+  width: calc($headshot-size + 40px);
+  filter: drop-shadow(0 0 0.25rem #333333);
+
+  img {
+    position: relative;
+    margin: 20px;
+    width: $headshot-size;
+    height: $headshot-size;
+    border-radius: 50%;
+  }
+}
