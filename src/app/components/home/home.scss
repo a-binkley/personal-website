@@ -32,22 +32,26 @@ p {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+
+  p {
+    font-size: $page-text;
+  }
 }
 
-#experience *,
+#experience {
+  * {
+    display: inline-block;
+  }
+  p {
+    font-size: $page-text;
+  }
+}
+
 #nextSteps * {
   display: inline-block;
+  font-size: 1.2em;
 }
 
 #experience-years {
   color: $accent-color;
-}
-
-#intro p,
-#experience p {
-  font-size: $page-text;
-}
-
-#nextSteps * {
-  font-size: 1.2em;
 }
