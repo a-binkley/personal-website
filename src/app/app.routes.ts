@@ -5,25 +5,31 @@ import { Contact } from './components/contact/contact';
 import { Home } from './components/home/home';
 import { Portfolio } from './components/portfolio/portfolio';
 
+const siteTitle = 'Adrian Binkley';
+
 export const routes: Routes = [
   {
-    title: 'Home',
+    title: `${siteTitle} | Home`,
     path: '',
     component: Home,
   },
   {
-    title: 'Portfolio',
+    title: `${siteTitle} | Portfolio`,
     path: 'portfolio',
     component: Portfolio,
   },
   {
-    title: 'Bio',
+    title: `${siteTitle} | Bio`,
     path: 'bio',
     component: Bio,
   },
   {
-    title: 'Contact',
+    title: `${siteTitle} | Contact`,
     path: 'contact',
     component: Contact,
+  },
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];
