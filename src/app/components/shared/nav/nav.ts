@@ -1,13 +1,16 @@
-import { LowerCasePipe, UpperCasePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, LowerCasePipe, UpperCasePipe } from '@angular/common';
+import { Component, Input } from '@angular/core';
+
+type Page = 'home' | 'portfolio' | 'bio' | 'contact';
 
 @Component({
   selector: 'app-nav',
-  imports: [LowerCasePipe, UpperCasePipe],
+  imports: [CommonModule, LowerCasePipe, UpperCasePipe],
   standalone: true,
   templateUrl: './nav.html',
   styleUrl: './nav.scss',
 })
 export class Nav {
-  public readonly navItems: string[] = ['Home', 'Portfolio', 'Bio', 'Contact'];
+  @Input() current: Page = 'home';
+  public readonly navItems: Page[] = ['home', 'portfolio', 'bio', 'contact'];
 }

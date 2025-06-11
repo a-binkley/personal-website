@@ -17,6 +17,11 @@ a {
   padding: 12px 14px;
 }
 
+a.selected {
+  background-color: $accent-color;
+  color: white;
+}
+
 a:hover {
   background-color: black;
   color: white;
