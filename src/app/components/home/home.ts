@@ -3,10 +3,11 @@ import { Component, inject } from '@angular/core';
 import { home } from '../../../constants';
 import { HomeService } from '../../services/home';
 import { Nav } from '../shared/nav/nav';
+import { Socials } from '../shared/socials/socials';
 
 @Component({
   selector: 'app-home',
-  imports: [Nav],
+  imports: [Nav, Socials],
   standalone: true,
   templateUrl: './home.html',
   styleUrl: './home.scss',

@@ -1,11 +1,5 @@
 @use "../../../styles.scss" as *;
 
-#page-wrapper {
-  position: absolute;
-  width: calc(100% - 2 * $gutter-width);
-  left: $gutter-width;
-}
-
 h1 {
   font-weight: 600;
   font-size: 3em;

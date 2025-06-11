@@ -1,9 +1,17 @@
 $accent-color: rgb(45, 115, 206);
-$gutter-width: 40px;
+$gutter-width: 80px;
 $nav-bg: rgba(100, 100, 100, 0.5);
+$nav-height: 60px;
 $page-text: 1.8em;
 
 * {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+}
+
+#page-wrapper {
+  position: absolute;
+  width: calc(100% - 2 * $gutter-width);
+  height: calc(100% - $nav-height);
+  left: $gutter-width;
 }

@@ -1,0 +1,16 @@
+<div id="socials-wrapper">
+  @for (item of socials; track item) {
+  <a
+    [id]='"social-" + item.site'
+    [href]="item.link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img
+      [id]='"svg-" + item.site'
+      [src]="'/img/' + item.site + '.svg'"
+      [alt]="item.site"
+    />
+  </a>
+  }
+</div>

@@ -1,0 +1,19 @@
+@use "../../../../styles.scss" as *;
+
+#socials-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  bottom: 0;
+  right: 0;
+  border: 3px solid black;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+img {
+  margin: 8px 8px 4px 8px;
+}
