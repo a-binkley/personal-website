@@ -1,1 +1,5 @@
-<p>nav works!</p>
+<div id="nav-wrapper">
+  @for (item of navItems; track item) {
+  <a href="/{{ item | lowercase }}">{{ item | uppercase }}</a>
+  }
+</div>
