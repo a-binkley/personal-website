@@ -1,74 +1,48 @@
 {
-	"name": "personal-website",
-	"version": "1.0.0",
-	"private": true,
-	"dependencies": {
-		"@testing-library/jest-dom": "^5.17.0",
-		"@testing-library/react": "^13.4.0",
-		"@testing-library/user-event": "^13.5.0",
-		"@types/jest": "^27.5.2",
-		"@types/node": "^16.18.57",
-		"@types/react": "^18.2.25",
-		"@types/react-dom": "^18.2.10",
-		"bootstrap-icons": "^1.11.1",
-		"buffer": "^6.0.3",
-		"csstype": "^3.1.2",
-		"moment": "^2.29.4",
-		"nth-check": "^2.0.1",
-		"octokit": "^3.1.2",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-scripts": "^5.0.1",
-		"react-test-renderer": "^18.2.0",
-		"typescript": "^4.9.5",
-		"web-vitals": "^2.1.4",
-		"ws": "^8.17.1"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test --coverage --watchAll=false",
-		"eject": "react-scripts eject",
-		"lint": "npx eslint ."
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"jest": {
-		"collectCoverageFrom": [
-			"./src/NetworkRequests.ts",
-			"./src/components/**",
-			"!./src/components/*/index.ts"
-		],
-		"coverageThreshold": {
-			"global": {
-				"statements": 90,
-				"branches": 90,
-				"functions": 90,
-				"lines": 90
-			}
-		}
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@types/react-test-renderer": "^18.0.5",
-		"@typescript-eslint/eslint-plugin": "^5.62.0",
-		"@typescript-eslint/parser": "^5.62.0",
-		"eslint": "^8.51.0",
-		"react-router-dom": "^6.16.0"
-	}
+  "name": "personal-website",
+  "version": "1.1.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "ng lint",
+    "serve:ssr:personal-website": "node dist/personal-website/server/server.mjs"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/compiler": "^20.0.0",
+    "@angular/core": "^20.0.0",
+    "@angular/forms": "^20.0.0",
+    "@angular/platform-browser": "^20.0.0",
+    "@angular/platform-server": "^20.0.0",
+    "@angular/router": "^20.0.0",
+    "@angular/ssr": "^20.0.1",
+    "express": "^5.1.0",
+    "luxon": "^3.6.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.0.1",
+    "@angular/cli": "^20.0.1",
+    "@angular/compiler-cli": "^20.0.0",
+    "@types/express": "^5.0.1",
+    "@types/jasmine": "~5.1.0",
+    "@types/luxon": "^3.6.2",
+    "@types/node": "^20.17.19",
+    "angular-eslint": "20.0.0",
+    "eslint": "^9.28.0",
+    "jasmine-core": "~5.7.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.8.2",
+    "typescript-eslint": "8.33.1"
+  }
 }

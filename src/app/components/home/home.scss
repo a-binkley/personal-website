@@ -1,0 +1,53 @@
+@use "../../../styles.scss" as *;
+
+#page-wrapper {
+  position: absolute;
+  width: calc(100% - 2 * $gutter-width);
+  left: $gutter-width;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3em;
+  margin: 6px 0 0 0;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: $page-text;
+}
+
+p {
+  font-weight: 400;
+  margin: 0;
+}
+
+.text-grey {
+  color: rgb(100, 100, 100);
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#experience *,
+#nextSteps * {
+  display: inline-block;
+}
+
+#experience-years {
+  color: $accent-color;
+}
+
+#intro p,
+#experience p {
+  font-size: $page-text;
+}
+
+#nextSteps * {
+  font-size: 1.2em;
+}
