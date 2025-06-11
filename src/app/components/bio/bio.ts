@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
+import { Nav } from '../shared/nav/nav';
+
 @Component({
   selector: 'app-bio',
-  imports: [],
+  imports: [Nav],
+  standalone: true,
   templateUrl: './bio.html',
-  styleUrl: './bio.scss'
+  styleUrl: './bio.scss',
 })
-export class Bio {
-
-}
+export class Bio {}
