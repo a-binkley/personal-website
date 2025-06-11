@@ -3,7 +3,7 @@ name: Commit Healthchecks
 on:
   push:
     branches-ignore:
-    - 'main'
+      - "main"
 
 jobs:
   style-check:
@@ -12,7 +12,7 @@ jobs:
       - name: Check out commit
         uses: actions/checkout@v3
       - name: Install Dependencies
-        run: npm i
+        run: npm ci
       - name: Run Lint Check
         run: npm run lint
   unit-tests:
@@ -21,6 +21,6 @@ jobs:
       - name: Check out commit
         uses: actions/checkout@v3
       - name: Install Dependencies
-        run: npm i
+        run: npm ci
       - name: Run Unit Tests
         run: npm test
