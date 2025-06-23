@@ -1,0 +1,10 @@
+@use "../../../../styles.scss" as *;
+
+.page-gradient {
+  position: absolute;
+  width: 100vw;
+  height: 4 * $nav-height;
+  bottom: 0;
+  background: linear-gradient(345deg, $accent-color, #fff0 15%),
+    linear-gradient(15deg, $accent-color, #fff0 25%);
+}
