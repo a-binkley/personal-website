@@ -6,10 +6,11 @@ import { Nav } from '../shared/nav/nav';
 import { Resume } from '../shared/resume/resume';
 import { BusinessCard } from './business-card/business-card';
 import { PageGradient } from '../shared/page-gradient/page-gradient';
+import { ProfTimeline } from './prof-timeline/prof-timeline';
 
 @Component({
   selector: 'app-home',
-  imports: [BusinessCard, Nav, Resume, PageGradient],
+  imports: [BusinessCard, Nav, Resume, PageGradient, ProfTimeline],
   standalone: true,
   templateUrl: './home.html',
   styleUrl: './home.scss',

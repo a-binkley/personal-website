@@ -1,0 +1,8 @@
+@use "../../../../styles.scss" as *;
+
+#timeline {
+  position: relative;
+  display: block;
+  margin-top: 40px;
+  //   --p-timeline-event-marker-size: 20px;
+}
