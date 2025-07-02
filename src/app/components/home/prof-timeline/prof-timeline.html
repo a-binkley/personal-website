@@ -1,17 +1,17 @@
 <section id="timeline">
-  <h2>What I've Done So Far</h2>
-  <div class="flex-parent">
-    <div class="input-flex-container">
-      <p-timeline [value]="timelineData" align="alternate">
-        <ng-template #content let-event>
-          <b>{{ event.date }}</b>
-        </ng-template>
-        <ng-template #opposite let-event>
-          <small class="text-surface-500 dark:text-surface-400"
-            >{{ event.label }}</small
-          >
-        </ng-template>
-      </p-timeline>
-    </div>
-  </div>
+	<h2>What I've Done So Far</h2>
+	<div class="flex-parent">
+		<div class="input-flex-container">
+			<p-timeline [value]="timelineData" align="alternate">
+				<ng-template #content let-event>
+					<b>{{ event.date }}</b>
+				</ng-template>
+				<ng-template #opposite let-event>
+					<small class="text-surface-500 dark:text-surface-400"
+						>{{ event.label }}</small
+					>
+				</ng-template>
+			</p-timeline>
+		</div>
+	</div>
 </section>
