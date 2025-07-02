@@ -1,59 +1,59 @@
 @use "../../../styles.scss" as *;
 
 h1 {
-  font-weight: 600;
-  font-size: 3em;
-  margin: 6px 0 40px 0;
+	font-weight: 600;
+	font-size: 3em;
+	margin: 6px 0 40px 0;
 }
 
 h2 {
-  font-weight: 600;
-  font-size: $page-text;
+	font-weight: 600;
+	font-size: $page-text;
 }
 
 p {
-  font-weight: 400;
-  margin: 0;
+	font-weight: 400;
+	margin: 0;
 }
 
 .text-grey {
-  color: rgb(100, 100, 100);
+	color: rgb(100, 100, 100);
 }
 
 #intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
 
-  p {
-    font-size: $page-text;
-  }
+	p {
+		font-size: $page-text;
+	}
 }
 
 #experience {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  left: 20px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	left: 20px;
 
-  #text-emphasis * {
-    display: inline;
-    font-size: $page-text;
-    text-wrap: wrap;
-  }
+	#text-emphasis * {
+		display: inline;
+		font-size: $page-text;
+		text-wrap: wrap;
+	}
 
-  .text-secondary {
-    display: inline-block;
-    font-size: 1.2em;
-  }
+	.text-secondary {
+		display: inline-block;
+		font-size: 1.2em;
+	}
 
-  .text-secondary:first-of-type {
-    margin-top: 20px;
-  }
+	.text-secondary:first-of-type {
+		margin-top: 20px;
+	}
 
-  #experience-years {
-    color: $accent-color;
-  }
+	#experience-years {
+		color: $color-accent;
+	}
 }

@@ -8,28 +8,28 @@ import { Portfolio } from './components/portfolio/portfolio';
 const siteTitle = 'Adrian Binkley';
 
 export const routes: Routes = [
-  {
-    title: `${siteTitle} | Home`,
-    path: '',
-    component: Home,
-  },
-  {
-    title: `${siteTitle} | Portfolio`,
-    path: 'portfolio',
-    component: Portfolio,
-  },
-  {
-    title: `${siteTitle} | Bio`,
-    path: 'bio',
-    component: Bio,
-  },
-  {
-    title: `${siteTitle} | Contact`,
-    path: 'contact',
-    component: Contact,
-  },
-  {
-    path: '**',
-    redirectTo: '',
-  },
+	{
+		title: `${siteTitle} | Home`,
+		path: '',
+		component: Home,
+	},
+	{
+		title: `${siteTitle} | Portfolio`,
+		path: 'portfolio',
+		component: Portfolio,
+	},
+	{
+		title: `${siteTitle} | About`,
+		path: 'about',
+		component: Bio,
+	},
+	{
+		title: `${siteTitle} | Contact`,
+		path: 'contact',
+		component: Contact,
+	},
+	{
+		path: '**',
+		redirectTo: '',
+	},
 ];

@@ -1,7 +1,7 @@
-<nav id="nav-wrapper" role="navigation">
-  @for (item of navItems; track item) {
-  <a href="/{{ item | lowercase }}" [ngClass]="{'selected': current === item}"
-    >{{ item | uppercase }}</a
-  >
-  }
-</nav>
+<p-menubar [model]="navItems" [dt]="navBar">
+	<ng-template #end>
+		<a target="_blank" href="Resume.pdf">
+			<p-button label="Résumé" icon="pi pi-download" />
+		</a>
+	</ng-template>
+</p-menubar>
