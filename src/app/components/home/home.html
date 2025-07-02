@@ -1,22 +1,22 @@
 <app-nav></app-nav>
 <div id="page-wrapper" role="main">
-  <section id="intro">
-    <p class="text-grey">Hi there, my name is&nbsp;</p>
-    <h1 id="name-header">Adrian Binkley</h1>
-  </section>
-  <section id="home-body">
-    <app-business-card></app-business-card>
-    <section id="experience">
-      <div id="text-emphasis">
-        <p>{{ content.experience[0] }}&nbsp;</p>
-        <h2 id="experience-years">{{ yoe }} years&nbsp;</h2>
-        <p>{{ content.experience[1] }}</p>
-      </div>
-      <p class="text-secondary">{{ content.nextSteps[0] }}&nbsp;</p>
-      <a class="text-secondary" href="/portfolio">{{ content.nextSteps[1] }}</a>
-      <app-resume></app-resume>
-    </section>
-  </section>
-  <app-prof-timeline></app-prof-timeline>
+	<section id="intro">
+		<p class="text-grey">Hi there, my name is&nbsp;</p>
+		<h1 id="name-header">Adrian Binkley</h1>
+	</section>
+	<section id="experience">
+		<div id="text-emphasis">
+			<p>{{ content.experience[0] }}&nbsp;</p>
+			<h2 id="experience-years">{{ yoe }} years&nbsp;</h2>
+			<p>{{ content.experience[1] }}</p>
+		</div>
+		<p class="text-secondary">{{ content.nextSteps[0] }}&nbsp;</p>
+		<a class="text-secondary" href="/portfolio"
+			>{{ content.nextSteps[1] }}</a
+		>
+	</section>
+	<section id="home-body">
+		<app-business-card></app-business-card>
+		<app-prof-timeline></app-prof-timeline>
+	</section>
 </div>
-<app-page-gradient></app-page-gradient>

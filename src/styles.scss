@@ -1,22 +1,36 @@
-$accent-color: var(--p-sky-600);
-$page-width: 1600px;
-$nav-bg: rgba(100, 100, 100, 0.5);
-$nav-height: 60px;
-$page-text: 1.8em;
+@import "primeicons/primeicons.css";
+
+$color-primary: #f7f7f7;
+$color-secondary: #f2e7d5;
+$color-accent: #6d9886;
+$color-contrast: #393e46;
+$page-width: 1300px;
+$page-text: 1.2em;
 
 * {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+}
+
+:root {
+	background: $color-secondary;
 }
 
 #page-wrapper {
-  position: absolute;
-  width: $page-width;
-  height: calc(100% - $nav-height);
-  left: calc((100% - $page-width) / 2);
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 40px;
+	bottom: 0;
+	left: calc((100vw - $page-width) / 2);
+	height: calc(100vh - 56px);
+	width: $page-width;
+	background: $color-primary;
 }
 
 .text-secondary {
-  display: inline-block;
-  font-size: 1.2em;
+	display: inline-block;
+	font-size: 1.2em;
 }
