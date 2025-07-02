@@ -3,7 +3,7 @@
 h1 {
 	font-weight: 600;
 	font-size: 3em;
-	margin: 6px 0 40px 0;
+	margin: 6px 0 0 0;
 }
 
 h2 {
@@ -37,10 +37,11 @@ p {
 	display: inline-block;
 	vertical-align: top;
 	left: 20px;
+	width: 80%;
 
 	#text-emphasis * {
 		display: inline;
-		font-size: $page-text;
+		font-size: 1.25 * $page-text;
 		text-wrap: wrap;
 	}
 
@@ -56,4 +57,11 @@ p {
 	#experience-years {
 		color: $color-accent;
 	}
+}
+
+#home-body {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 40px;
 }

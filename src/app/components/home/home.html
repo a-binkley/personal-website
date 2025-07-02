@@ -4,19 +4,19 @@
 		<p class="text-grey">Hi there, my name is&nbsp;</p>
 		<h1 id="name-header">Adrian Binkley</h1>
 	</section>
+	<section id="experience">
+		<div id="text-emphasis">
+			<p>{{ content.experience[0] }}&nbsp;</p>
+			<h2 id="experience-years">{{ yoe }} years&nbsp;</h2>
+			<p>{{ content.experience[1] }}</p>
+		</div>
+		<p class="text-secondary">{{ content.nextSteps[0] }}&nbsp;</p>
+		<a class="text-secondary" href="/portfolio"
+			>{{ content.nextSteps[1] }}</a
+		>
+	</section>
 	<section id="home-body">
 		<app-business-card></app-business-card>
-		<section id="experience">
-			<div id="text-emphasis">
-				<p>{{ content.experience[0] }}&nbsp;</p>
-				<h2 id="experience-years">{{ yoe }} years&nbsp;</h2>
-				<p>{{ content.experience[1] }}</p>
-			</div>
-			<p class="text-secondary">{{ content.nextSteps[0] }}&nbsp;</p>
-			<a class="text-secondary" href="/portfolio"
-				>{{ content.nextSteps[1] }}</a
-			>
-		</section>
+		<app-prof-timeline></app-prof-timeline>
 	</section>
-	<app-prof-timeline></app-prof-timeline>
 </div>
