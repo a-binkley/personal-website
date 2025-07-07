@@ -1,2 +1,7 @@
 <app-nav current="contact"></app-nav>
-<h2>Coming soon!</h2>
+<p-toast></p-toast>
+<div id="contact-wrapper">
+    <p>While I'm not currently looking for work, you can always reach out to me via email:</p>
+    <a id="emailLink" href="mailto:adrianbinkley@gmail.com">{{ 'adrianbinkley@gmail.com' }}</a>
+    <p-button icon="pi pi-copy" ariaLabel="copy" [dt]="emailCopyBtn" (onClick)="copyEmail()" />
+</div>

@@ -1,0 +1,22 @@
+@use "../../../styles.scss" as *;
+
+#contact-wrapper {
+    position: absolute;
+    top: 96px;
+    left: 25vw;
+    width: 50vw;
+    padding: 20px;
+    font-size: 1.2em;
+    background-color: $color-primary;
+    border-radius: 20px;
+
+	filter: drop-shadow(0 0 0.25rem #333333);
+
+    p {
+        margin: 0 0 20px 0;
+    }
+}
+
+#emailLink {
+    margin: 0 10px 0 0;
+}
