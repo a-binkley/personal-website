@@ -25,3 +25,6 @@ export const home = {
 		},
 	],
 };
+
+export const contact = "While I'm not currently looking for work, you \
+can always reach out to me via email:";

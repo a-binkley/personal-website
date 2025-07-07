@@ -4,7 +4,7 @@ import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { Toast } from 'primeng/toast';
 
-import { COLORS } from '../../../constants';
+import { COLORS, contact } from '../../../constants';
 import { Nav } from '../shared/nav/nav';
 
 @Component({
@@ -16,10 +16,12 @@ import { Nav } from '../shared/nav/nav';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  public readonly emailAddress = 'adrianbinkley@gmail.com';
+  public readonly blurb = contact;
   constructor (private clipboard: Clipboard, private msgSvc: MessageService) {}
 
   public copyEmail() {
-    this.clipboard.copy('adrianbinkley@gmail.com');
+    this.clipboard.copy(this.emailAddress);
     this.msgSvc.add({
       severity: 'info',
       summary: 'Copied',

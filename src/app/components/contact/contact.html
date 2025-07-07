@@ -1,7 +1,11 @@
 <app-nav current="contact"></app-nav>
 <p-toast></p-toast>
 <div id="contact-wrapper">
-    <p>While I'm not currently looking for work, you can always reach out to me via email:</p>
-    <a id="emailLink" href="mailto:adrianbinkley@gmail.com">{{ 'adrianbinkley@gmail.com' }}</a>
+    <p>{{ blurb }}</p>
+    <a id="emailLink" [href]="`mailto:${emailAddress}`">{{ emailAddress }}</a>
     <p-button icon="pi pi-copy" ariaLabel="copy" [dt]="emailCopyBtn" (onClick)="copyEmail()" />
+    <p style="margin: 20px 0 0 0">
+        or on
+        <a href="https://www.linkedin.com/in/adrian-binkley/" target="_blank">LinkedIn</a>
+    </p>
 </div>
