@@ -1,5 +1,14 @@
 @use "../../../styles.scss" as *;
 
+@keyframes initLoad {
+	from {
+		color: $color-primary;
+	}
+	to {
+		color: inherit;
+	}
+}
+
 h1 {
 	font-weight: 600;
 	font-size: 3em;
