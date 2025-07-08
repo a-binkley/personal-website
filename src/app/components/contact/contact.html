@@ -1,11 +1,24 @@
 <app-nav current="contact"></app-nav>
 <p-toast></p-toast>
 <div id="contact-wrapper">
-    <p>{{ blurb }}</p>
-    <a id="emailLink" [href]="`mailto:${emailAddress}`">{{ emailAddress }}</a>
-    <p-button icon="pi pi-copy" ariaLabel="copy" [dt]="emailCopyBtn" (onClick)="copyEmail()" />
-    <p style="margin: 20px 0 0 0">
-        or on
-        <a href="https://www.linkedin.com/in/adrian-binkley/" target="_blank">LinkedIn</a>
-    </p>
+	<h2>Want to get in touch?</h2>
+	<p>
+		You can email me at
+		<a id="emailLink" [href]="`mailto:${emailAddress}`"
+			>{{ emailAddress }}</a
+		>
+		<p-button
+			icon="pi pi-copy"
+			ariaLabel="copy"
+			size="small"
+			[dt]="emailCopyBtn"
+			(onClick)="copyEmail()"
+		/>, message me on
+		<a href="https://www.linkedin.com/in/adrian-binkley/" target="_blank"
+			>LinkedIn</a
+		>, or send a transmission via
+		<a href="https://datatracker.ietf.org/doc/html/rfc1149" target="_blank"
+			>RFC 1149</a
+		>.
+	</p>
 </div>
