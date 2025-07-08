@@ -32,6 +32,7 @@ export class PortfolioService {
 						title: '',
 						tagline: '',
 						url: repoData.html_url,
+						site: '',
 						iconPaths: [],
 					},
 					lastModified: new Date(repoData.updated_at),
@@ -60,7 +61,7 @@ export class PortfolioService {
 		await Promise.allSettled(repoResponses).then((responses) => {
 			responses.forEach((response) => {
 				if (response.status === 'fulfilled' && response.value) {
-					const { title, tagline, iconPaths } = JSON.parse(
+					const { title, tagline, url, iconPaths } = JSON.parse(
 						Buffer.from(
 							response.value.data.content,
 							'base64'
@@ -72,12 +73,22 @@ export class PortfolioService {
 						...matchingData.repo,
 						title,
 						tagline,
+						site: url,
 						iconPaths,
 					};
 				}
 			});
 		});
 
-		return Object.values(data).filter((item) => item.repo.title);
+		return Object.values(data)
+			.filter((item) => item.repo.title)
+			.sort(
+				(a, b) =>
+					this.getTime(b.lastModified) - this.getTime(a.lastModified)
+			);
+	}
+
+	private getTime(date?: Date) {
+		return date != null ? date.getTime() : 0;
 	}
 }

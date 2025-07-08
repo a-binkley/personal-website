@@ -1,10 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DateTime } from 'luxon';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 export interface RepoInfo {
 	title: string;
-	url: string;
 	tagline: string;
+	url: string; // GitHub repo
+	site: string; // web app
 	iconPaths: string[];
 }
 
@@ -15,7 +18,7 @@ export interface CardInfo {
 
 @Component({
 	selector: 'app-card',
-	imports: [],
+	imports: [ButtonModule, CardModule],
 	templateUrl: './card.html',
 	styleUrl: './card.scss',
 })
@@ -27,7 +30,7 @@ export class Card implements OnInit {
 		if (this.info.lastModified) {
 			this.lastModifiedDate = DateTime.fromJSDate(
 				this.info.lastModified
-			).toFormat('ll');
+			).toFormat('dd LLL yyyy');
 		}
 	}
 }
