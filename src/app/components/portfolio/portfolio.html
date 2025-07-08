@@ -1,25 +1,6 @@
 <app-nav current="portfolio"></app-nav>
 <div class="page-wrapper wide" role="main">
 	<h1>Portfolio</h1>
-	<section id="portfolio-filters-bar">
-		<p-toolbar>
-			<ng-template #start> </ng-template>
-			<ng-template #end>
-				<p-iconfield iconPosition="left">
-					<p-floatlabel variant="on">
-						<p-inputicon class="pi pi-filter" />
-						<input
-							id="filter-input"
-							type="text"
-							pInputText
-							autocomplete="off"
-						/>
-						<label for="filter-input">Filter</label>
-					</p-floatlabel>
-				</p-iconfield>
-			</ng-template>
-		</p-toolbar>
-	</section>
 	<section id="portfolio-body">
 		@switch (loadingStatus) { @case (lsEnum.LOADING) {
 		<p-progress-spinner ariaLabel="loading" />

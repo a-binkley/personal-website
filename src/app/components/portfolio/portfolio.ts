@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FloatLabel } from 'primeng/floatlabel';
-import { IconFieldModule } from 'primeng/iconfield';
-import { InputIconModule } from 'primeng/inputicon';
-import { InputTextModule } from 'primeng/inputtext';
 import { MessageModule } from 'primeng/message';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
-import { SelectModule } from 'primeng/select';
-import { ToolbarModule } from 'primeng/toolbar';
 
 import { PortfolioService } from '../../services/portfolio';
 import { Nav } from '../shared/nav/nav';
@@ -21,18 +15,7 @@ enum LoadingStatus {
 
 @Component({
 	selector: 'app-portfolio',
-	imports: [
-		Card,
-		FloatLabel,
-		IconFieldModule,
-		InputIconModule,
-		InputTextModule,
-		MessageModule,
-		Nav,
-		ProgressSpinnerModule,
-		SelectModule,
-		ToolbarModule,
-	],
+	imports: [Card, MessageModule, Nav, ProgressSpinnerModule],
 	standalone: true,
 	templateUrl: './portfolio.html',
 	styleUrl: './portfolio.scss',
