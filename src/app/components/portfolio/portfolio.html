@@ -1,2 +1,26 @@
 <app-nav current="portfolio"></app-nav>
-<h2>Coming soon!</h2>
+<div class="page-wrapper wide" role="main">
+	<h1>Portfolio</h1>
+	<section id="portfolio-filters-bar">
+		<p-toolbar>
+			<ng-template #start> </ng-template>
+			<ng-template #end>
+				<p-iconfield iconPosition="left">
+					<p-inputicon class="pi pi-search" />
+					<input type="text" pInputText placeholder="Search" />
+				</p-iconfield>
+			</ng-template>
+		</p-toolbar>
+	</section>
+	<section id="portfolio-body">
+		@switch (loadingStatus) { @case (lsEnum.LOADING) {
+		<p-progress-spinner ariaLabel="loading" />
+		} @case (lsEnum.ERROR) {
+		<p-message severity="error"
+			>Error loading portfolio data. Please try again later</p-message
+		>
+		} @case (lsEnum.READY) {
+		<!-- TODO: grid display -->
+		} @default {} }
+	</section>
+</div>

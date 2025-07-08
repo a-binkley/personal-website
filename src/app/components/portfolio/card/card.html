@@ -1,1 +1,17 @@
-<p>card works!</p>
+<a
+	[href]="info.repo.url"
+	class="portfolio-item-wrapper"
+	target="_blank"
+	rel="noreferrer"
+>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 24 24">
+		@for (path of info.repo.iconPaths; track $index) {
+		<path [attr.d]="path" [attr.key]="'portfolio-icon-path-' + $index" />
+		}
+	</svg>
+	<div class="portfolio-item-info-wrapper">
+		<h2 class="portfolio-item-title">{{ info.repo.title }}</h2>
+		<h3 class="portfolio-item-tagline">{{ info.repo.tagline }}</h3>
+		<h4 class="portfolio-item-modified">{{ lastModifiedDate }}</h4>
+	</div>
+</a>
