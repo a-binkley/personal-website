@@ -3,9 +3,10 @@ import { Component, Input } from '@angular/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
+
 import { COLORS } from '../../../../constants';
 
-type Page = 'home' | 'portfolio' | 'bio' | 'contact';
+type Page = 'home' | 'about' | 'portfolio' | 'contact';
 
 @Component({
 	selector: 'app-nav',
@@ -16,7 +17,6 @@ type Page = 'home' | 'portfolio' | 'bio' | 'contact';
 })
 export class Nav {
 	@Input() current: Page = 'home';
-	//   public readonly navItems: Page[] = ['home', 'portfolio', 'bio', 'contact'];
 	public readonly navItems: MenuItem[] = [
 		{
 			label: 'Home',
