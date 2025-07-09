@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
@@ -15,31 +15,9 @@ type Page = 'home' | 'about' | 'portfolio' | 'contact';
 	templateUrl: './nav.html',
 	styleUrl: './nav.scss',
 })
-export class Nav {
+export class Nav implements OnInit {
 	@Input() current: Page = 'home';
-	public readonly navItems: MenuItem[] = [
-		{
-			label: 'Home',
-			icon: PrimeIcons.HOME,
-			routerLink: '/',
-		},
-		{
-			label: 'About',
-			icon: PrimeIcons.USER,
-			routerLink: '/about',
-		},
-		{
-			label: 'Portfolio',
-			icon: PrimeIcons.BRIEFCASE,
-			routerLink: '/portfolio',
-		},
-		{
-			label: 'Contact',
-			icon: PrimeIcons.ENVELOPE,
-			routerLink: '/contact',
-		},
-	];
-
+	public navItems: MenuItem[] = [];
 	public readonly navBar = {
 		colorScheme: {
 			light: {
@@ -54,4 +32,41 @@ export class Nav {
 			},
 		},
 	};
+
+	ngOnInit(): void {
+		this.navItems = [
+			{
+				label: 'Home',
+				icon: PrimeIcons.HOME,
+				routerLink: '/',
+				style: this.itemStyle('home'),
+			},
+			{
+				label: 'About',
+				icon: PrimeIcons.USER,
+				routerLink: '/about',
+				style: this.itemStyle('about'),
+			},
+			{
+				label: 'Portfolio',
+				icon: PrimeIcons.BRIEFCASE,
+				routerLink: '/portfolio',
+				style: this.itemStyle('portfolio'),
+			},
+			{
+				label: 'Contact',
+				icon: PrimeIcons.ENVELOPE,
+				routerLink: '/contact',
+				style: this.itemStyle('contact'),
+			},
+		];
+	}
+
+	public itemStyle(pageName: string): { [klass: string]: string } {
+		return this.current === pageName
+			? {
+					'border-bottom': `2px solid ${COLORS.ACCENT}`,
+			  }
+			: {};
+	}
 }
