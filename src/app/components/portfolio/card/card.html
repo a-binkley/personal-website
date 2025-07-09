@@ -1,48 +1,50 @@
-<p-card [style]="{ width: '18rem', overflow: 'hidden' }">
-	<ng-template #header>
-		<svg
-			[style]="{ display: 'flex', width: '100%', 'justify-content': 'center' }"
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="-4 -4 24 24"
-		>
-			@for (path of info.repo.iconPaths; track $index) {
-			<path
-				[attr.d]="path"
-				[attr.key]="'portfolio-icon-path-' + $index"
-			/>
-			}
-		</svg>
-	</ng-template>
-	<ng-template #title>{{ info.repo.title }}</ng-template>
-	<ng-template #subtitle>{{ lastModifiedDate }}</ng-template>
-	<p>{{ info.repo.tagline }}</p>
-	<ng-template #footer>
-		<div class="flex gap-4 mt-1">
-			<a
-				[href]="info.repo.url"
-				class="portfolio-item-wrapper"
-				target="_blank"
-				rel="noreferrer"
-				tabindex="-1"
-			>
-				<p-button
-					label="GitHub"
-					class="w-full"
-					[outlined]="true"
-					[style]="{ margin: '0 10px 0 0' }"
+<div class="card-wrapper">
+	<p-card>
+		<ng-template #header>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 24 24">
+				@for (path of info.repo.iconPaths; track $index) {
+				<path
+					[attr.d]="path"
+					[attr.key]="'portfolio-icon-path-' + $index"
 				/>
-			</a>
-			@if (info.repo.site) {
-			<a
-				[href]="info.repo.site"
-				class="portfolio-item-wrapper"
-				target="_blank"
-				rel="noreferrer"
-				tabindex="-1"
-			>
-				<p-button label="Web App" class="w-full" styleClass="w-full" />
-			</a>
-			}
-		</div>
-	</ng-template>
-</p-card>
+				}
+			</svg>
+		</ng-template>
+		<ng-template #title>{{ info.repo.title }}</ng-template>
+		<ng-template #subtitle>{{ lastModifiedDate }}</ng-template>
+		<p>{{ info.repo.tagline }}</p>
+		<ng-template #footer>
+			<div class="flex gap-4 mt-1">
+				<a
+					[href]="info.repo.url"
+					class="card-button"
+					target="_blank"
+					rel="noreferrer"
+					tabindex="-1"
+				>
+					<p-button
+						label="GitHub"
+						class="w-full"
+						[outlined]="true"
+						[style]="{ margin: '0 10px 0 0' }"
+					/>
+				</a>
+				@if (info.repo.site) {
+				<a
+					[href]="info.repo.site"
+					class="card-button"
+					target="_blank"
+					rel="noreferrer"
+					tabindex="-1"
+				>
+					<p-button
+						label="Web App"
+						class="w-full"
+						styleClass="w-full"
+					/>
+				</a>
+				}
+			</div>
+		</ng-template>
+	</p-card>
+</div>

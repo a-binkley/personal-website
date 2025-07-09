@@ -1,0 +1,27 @@
+.card-wrapper {
+	width: 18rem;
+	overflow: "hidden";
+}
+
+svg {
+	display: "flex";
+	width: 100%;
+	justify-content: "center";
+}
+
+/* Tablets */
+@media only screen and (min-width: 500px) and (max-width: 1280px) {
+	.card-wrapper {
+		width: 12rem;
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 499px) {
+	#contact-wrapper {
+		top: 66px;
+		left: 10px;
+		width: calc(100vw - 20px);
+		font-size: 1.1em;
+	}
+}

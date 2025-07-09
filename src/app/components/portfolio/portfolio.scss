@@ -25,3 +25,27 @@ h1 {
 	align-items: flex-start;
 	gap: 40px;
 }
+
+/* Tablets */
+@media only screen and (min-width: 500px) and (max-width: 1280px) {
+	.page-wrapper {
+		background: $color-secondary;
+	}
+
+	#portfolio-body {
+		width: calc(100vw - 80px);
+		gap: 20px;
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 499px) {
+	.page-wrapper {
+		background: $color-secondary;
+	}
+
+	#portfolio-body {
+		width: calc(100vw - 80px);
+		gap: 20px;
+	}
+}
