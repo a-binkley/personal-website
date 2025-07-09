@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
 
 import { COLORS } from '../../../../constants';
+import { WINDOW } from '../../../app';
 
 type Page = 'home' | 'about' | 'portfolio' | 'contact';
 
@@ -29,9 +30,14 @@ export class Nav implements OnInit {
 				item: {
 					color: COLORS.PRIMARY,
 				},
+				submenu: {
+					background: COLORS.CONTRAST,
+					borderColor: COLORS.CONTRAST,
+				},
 			},
 		},
 	};
+	private window = inject(WINDOW);
 
 	ngOnInit(): void {
 		this.navItems = [
@@ -63,10 +69,16 @@ export class Nav implements OnInit {
 	}
 
 	public itemStyle(pageName: string): { [klass: string]: string } {
-		return this.current === pageName
-			? {
+		if (this.current === pageName) {
+			if (this.window.innerWidth <= 1280) {
+				return {
+					'border-left': `2px solid ${COLORS.ACCENT}`,
+				};
+			} else {
+				return {
 					'border-bottom': `2px solid ${COLORS.ACCENT}`,
-			  }
-			: {};
+				};
+			}
+		} else return {};
 	}
 }
