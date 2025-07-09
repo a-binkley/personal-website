@@ -1,4 +1,9 @@
-<p-menubar [model]="navItems" [dt]="navBar" [style]="{ 'height': '56px' }">
+<p-menubar
+	[model]="navItems"
+	[dt]="navBar"
+	[style]="{ 'height': '56px' }"
+	role="navigation"
+>
 	<ng-template #end>
 		<a target="_blank" href="Resume.pdf" tabindex="-1">
 			<p-button label="Résumé" icon="pi pi-download" />
