@@ -1,1 +1,14 @@
 <app-nav current="about"></app-nav>
+<div id="about-wrapper">
+	<h2>{{ text.pageIntro }}</h2>
+	<p>{{ text.background }}</p>
+	<p>{{ text.hobbies }}</p>
+	<p>
+		{{ text.foundryLinkIntro }}
+		<a [href]="'https://' + text.foundryLink">{{ text.foundryLink }}</a>
+	</p>
+	<p>
+		{{ text.paintingPhotosLinkIntro }}
+		<a [href]="text.paintingPhotosLink" target="_blank">here</a>
+	</p>
+</div>

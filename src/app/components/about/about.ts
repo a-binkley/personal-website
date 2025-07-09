@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { about } from '../../../constants';
 import { Nav } from '../shared/nav/nav';
 
 @Component({
@@ -9,4 +10,6 @@ import { Nav } from '../shared/nav/nav';
 	templateUrl: './about.html',
 	styleUrl: './about.scss',
 })
-export class About {}
+export class About {
+	public readonly text = about;
+}
