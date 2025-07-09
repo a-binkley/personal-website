@@ -16,3 +16,21 @@
 small {
 	font-size: 1em;
 }
+
+/* Tablets */
+@media only screen and (min-width: 500px) and (max-width: 1280px) {
+	small {
+		font-size: 0.9em;
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 499px) {
+	small {
+		font-size: 0.9em;
+	}
+
+	#timeline > h2 {
+		margin: 0 0 20px 0;
+	}
+}

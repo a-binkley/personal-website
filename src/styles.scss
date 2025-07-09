@@ -4,7 +4,7 @@ $color-primary: #f7f7f7;
 $color-secondary: #f2e7d5;
 $color-accent: #6d9886;
 $color-contrast: #393e46;
-$page-width: 1300px;
+$page-width: min(1300px, 90vw);
 $page-text: 1.2em;
 
 * {

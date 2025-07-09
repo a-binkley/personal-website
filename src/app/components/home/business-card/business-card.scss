@@ -1,4 +1,4 @@
-$headshot-size: 256px;
+$headshot-size: min(256px, 25vw);
 
 #business-card-wrapper {
 	position: relative;
@@ -17,5 +17,12 @@ $headshot-size: 256px;
 		width: $headshot-size;
 		height: $headshot-size;
 		border-radius: 50%;
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 499px) {
+	#business-card-wrapper {
+		display: none;
 	}
 }

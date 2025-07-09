@@ -45,7 +45,6 @@ p {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	left: 20px;
 	width: 80%;
 
 	#text-emphasis * {
@@ -59,10 +58,6 @@ p {
 		font-size: 1.2em;
 	}
 
-	.text-secondary:first-of-type {
-		margin-top: 20px;
-	}
-
 	#experience-years {
 		color: $color-accent;
 	}
@@ -73,4 +68,40 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	gap: 40px;
+}
+
+/* Tablets */
+@media only screen and (min-width: 500px) and (max-width: 1280px) {
+	#experience {
+		width: 90%;
+	}
+
+	#home-body {
+		width: 90%;
+		gap: 10px;
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 499px) {
+	h1 {
+		font-size: 2.4em;
+	}
+
+	#experience {
+		width: 90%;
+
+		#text-emphasis * {
+			font-size: $page-text;
+		}
+
+		.text-secondary {
+			font-size: 1em;
+		}
+	}
+
+	#home-body {
+		width: 90%;
+		gap: 0;
+	}
 }
