@@ -17,18 +17,18 @@ $page-text: 1.2em;
 }
 
 .page-wrapper {
-	position: absolute;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 40px;
-	bottom: 0;
 	left: calc((100vw - $page-width) / 2);
 	height: calc(100vh - 56px);
 	width: $page-width;
 	background: $color-primary;
-	overflow-y: scroll;
+	overflow-y: auto;
+	scrollbar-width: thin;
 }
 
 .text-secondary {
