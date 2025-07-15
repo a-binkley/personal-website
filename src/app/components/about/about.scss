@@ -2,9 +2,13 @@
 
 #about-wrapper {
 	position: absolute;
-	top: 96px;
-	left: 25vw;
-	width: 50vw;
+	top: 56px;
+	width: 100%;
+	padding: 20px 0;
+}
+
+#about-content {
+	position: relative;
 	padding: 32px;
 	font-size: 1.2em;
 	background-color: $color-primary;
@@ -27,7 +31,7 @@
 
 /* Tablets */
 @media only screen and (min-width: 500px) and (max-width: 1280px) {
-	#about-wrapper {
+	#about-content {
 		left: 40px;
 		width: calc(100vw - 80px);
 	}
@@ -35,8 +39,7 @@
 
 /* Mobile */
 @media only screen and (max-width: 499px) {
-	#about-wrapper {
-		top: 66px;
+	#about-content {
 		left: 10px;
 		width: calc(100vw - 20px);
 		font-size: 1.1em;

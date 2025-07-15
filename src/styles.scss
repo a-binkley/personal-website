@@ -28,9 +28,18 @@ $page-text: 1.2em;
 	height: calc(100vh - 56px);
 	width: $page-width;
 	background: $color-primary;
+	overflow-y: scroll;
 }
 
 .text-secondary {
 	display: inline-block;
 	font-size: 1.2em;
+}
+
+/* Mobile */
+@media only screen and (max-width: 499px) {
+	.page-wrapper {
+		left: 0;
+		width: 100%;
+	}
 }

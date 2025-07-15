@@ -1,14 +1,16 @@
 <app-nav current="about"></app-nav>
 <div id="about-wrapper" role="main">
-	<h1>{{ text.pageIntro }}</h1>
-	<p>{{ text.background }}</p>
-	<p>{{ text.hobbies }}</p>
-	<p>
-		{{ text.foundryLinkIntro }}
-		<a [href]="'https://' + text.foundryLink">{{ text.foundryLink }}</a>
-	</p>
-	<p>
-		{{ text.paintingPhotosLinkIntro }}
-		<a [href]="text.paintingPhotosLink" target="_blank">here</a>
-	</p>
+	<div id="about-content">
+		<h1>{{ text.pageIntro }}</h1>
+		<p>{{ text.background }}</p>
+		<p>{{ text.hobbies }}</p>
+		<p>
+			{{ text.foundryLinkIntro }}
+			<a [href]="'https://' + text.foundryLink">{{ text.foundryLink }}</a>
+		</p>
+		<p>
+			{{ text.paintingPhotosLinkIntro }}
+			<a [href]="text.paintingPhotosLink" target="_blank">here</a>
+		</p>
+	</div>
 </div>
