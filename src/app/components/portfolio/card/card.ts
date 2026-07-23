@@ -27,7 +27,7 @@ export class CardComponent implements OnInit {
 	public lastModifiedDate = 'No data';
 
 	ngOnInit(): void {
-		if (this.info.lastModified) {
+		if (this.info?.lastModified) {
 			this.lastModifiedDate = DateTime.fromJSDate(
 				this.info.lastModified,
 			).toFormat('dd LLL yyyy');
