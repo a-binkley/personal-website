@@ -91,7 +91,10 @@
 								"input": "public"
 							}
 						],
-						"styles": ["src/styles.scss"]
+						"styles": ["src/styles.scss"],
+						"externalDependencies": [
+							"@angular/platform-browser-dynamic/testing"
+						]
 					}
 				},
 				"lint": {

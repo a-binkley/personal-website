@@ -1,23 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BusinessCard } from './business-card';
+import { BusinessCardComponent } from './business-card';
 
-describe('BusinessCard', () => {
-  let component: BusinessCard;
-  let fixture: ComponentFixture<BusinessCard>;
+describe('BusinessCardComponent', () => {
+	let component: BusinessCardComponent;
+	let fixture: ComponentFixture<BusinessCardComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BusinessCard]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [BusinessCardComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(BusinessCard);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(BusinessCardComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });
