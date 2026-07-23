@@ -22,14 +22,14 @@ export interface CardInfo {
 	templateUrl: './card.html',
 	styleUrl: './card.scss',
 })
-export class Card implements OnInit {
+export class CardComponent implements OnInit {
 	@Input() info!: CardInfo;
-	public lastModifiedDate: string = 'No data';
+	public lastModifiedDate = 'No data';
 
 	ngOnInit(): void {
 		if (this.info.lastModified) {
 			this.lastModifiedDate = DateTime.fromJSDate(
-				this.info.lastModified
+				this.info.lastModified,
 			).toFormat('dd LLL yyyy');
 		}
 	}

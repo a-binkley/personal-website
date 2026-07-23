@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 import { about } from '../../../constants';
-import { Nav } from '../shared/nav/nav';
+import { NavComponent } from '../shared/nav/nav';
 
 @Component({
 	selector: 'app-about',
-	imports: [Nav],
+	imports: [NavComponent],
 	standalone: true,
 	templateUrl: './about.html',
 	styleUrl: './about.scss',
 })
-export class About {
+export class AboutComponent {
 	public readonly text = about;
 }

@@ -1,22 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Socials } from './socials';
+import { SocialsComponent } from './socials';
 
-describe('Socials', () => {
-  let component: Socials;
-  let fixture: ComponentFixture<Socials>;
+describe('SocialsComponent', () => {
+	let component: SocialsComponent;
+	let fixture: ComponentFixture<SocialsComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Socials],
-    }).compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [SocialsComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(Socials);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(SocialsComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

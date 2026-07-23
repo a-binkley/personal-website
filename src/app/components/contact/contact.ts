@@ -5,19 +5,22 @@ import { ButtonModule } from 'primeng/button';
 import { Toast } from 'primeng/toast';
 
 import { COLORS } from '../../../constants';
-import { Nav } from '../shared/nav/nav';
+import { NavComponent } from '../shared/nav/nav';
 
 @Component({
 	selector: 'app-contact',
-	imports: [ButtonModule, Nav, Toast],
+	imports: [ButtonModule, NavComponent, Toast],
 	providers: [MessageService],
 	standalone: true,
 	templateUrl: './contact.html',
 	styleUrl: './contact.scss',
 })
-export class Contact {
+export class ContactComponent {
 	public readonly emailAddress = 'adrianbinkley@gmail.com';
-	constructor(private clipboard: Clipboard, private msgSvc: MessageService) {}
+	constructor(
+		private clipboard: Clipboard,
+		private msgSvc: MessageService,
+	) {}
 
 	public copyEmail() {
 		this.clipboard.copy(this.emailAddress);
