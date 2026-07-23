@@ -1,4 +1,6 @@
 name: Commit Healthchecks
+permissions:
+  contents: read
 
 on:
   push:
