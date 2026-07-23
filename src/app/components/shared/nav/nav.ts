@@ -16,7 +16,7 @@ type Page = 'home' | 'about' | 'portfolio' | 'contact';
 	templateUrl: './nav.html',
 	styleUrl: './nav.scss',
 })
-export class Nav implements OnInit {
+export class NavComponent implements OnInit {
 	@Input() current: Page = 'home';
 	public navItems: MenuItem[] = [];
 	public readonly navBar = {
@@ -68,7 +68,7 @@ export class Nav implements OnInit {
 		];
 	}
 
-	public itemStyle(pageName: string): { [klass: string]: string } {
+	public itemStyle(pageName: string): Record<string, string> {
 		if (this.current === pageName) {
 			if (this.window.innerWidth <= 1280) {
 				return {

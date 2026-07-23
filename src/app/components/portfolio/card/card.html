@@ -1,5 +1,6 @@
 <div class="card-wrapper">
 	<p-card>
+		@if (info?.repo) {
 		<ng-template #header>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 24 24">
 				@for (path of info.repo.iconPaths; track $index) {
@@ -46,5 +47,6 @@
 				}
 			</div>
 		</ng-template>
+		}
 	</p-card>
 </div>

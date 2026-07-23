@@ -2,18 +2,18 @@ import { Component, inject } from '@angular/core';
 
 import { home } from '../../../constants';
 import { HomeService } from '../../services/home';
-import { Nav } from '../shared/nav/nav';
-import { BusinessCard } from './business-card/business-card';
-import { ProfTimeline } from './prof-timeline/prof-timeline';
+import { NavComponent } from '../shared/nav/nav';
+import { BusinessCardComponent } from './business-card/business-card';
+import { ProfTimelineComponent } from './prof-timeline/prof-timeline';
 
 @Component({
 	selector: 'app-home',
-	imports: [BusinessCard, Nav, ProfTimeline],
+	imports: [BusinessCardComponent, NavComponent, ProfTimelineComponent],
 	standalone: true,
 	templateUrl: './home.html',
 	styleUrl: './home.scss',
 })
-export class Home {
+export class HomeComponent {
 	public readonly content = home;
 	private readonly homeSvc = inject(HomeService);
 

@@ -1,22 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
-import { ProfTimeline } from './prof-timeline';
+import { ProfTimelineComponent } from './prof-timeline';
 
-describe('ProfTimeline', () => {
-  let component: ProfTimeline;
-  let fixture: ComponentFixture<ProfTimeline>;
+describe('ProfTimelineComponent', () => {
+	let component: ProfTimelineComponent;
+	let fixture: ComponentFixture<ProfTimelineComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ProfTimeline],
-    }).compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [ProfTimelineComponent, RouterTestingModule],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(ProfTimeline);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(ProfTimelineComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

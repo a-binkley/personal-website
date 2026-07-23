@@ -3,8 +3,8 @@ import { MessageModule } from 'primeng/message';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 import { PortfolioService } from '../../services/portfolio';
-import { Nav } from '../shared/nav/nav';
-import { Card, CardInfo } from './card/card';
+import { NavComponent } from '../shared/nav/nav';
+import { CardComponent, CardInfo } from './card/card';
 
 enum LoadingStatus {
 	INITIAL = 'Initial',
@@ -15,12 +15,17 @@ enum LoadingStatus {
 
 @Component({
 	selector: 'app-portfolio',
-	imports: [Card, MessageModule, Nav, ProgressSpinnerModule],
+	imports: [
+		CardComponent,
+		MessageModule,
+		NavComponent,
+		ProgressSpinnerModule,
+	],
 	standalone: true,
 	templateUrl: './portfolio.html',
 	styleUrl: './portfolio.scss',
 })
-export class Portfolio implements OnInit {
+export class PortfolioComponent implements OnInit {
 	public readonly lsEnum = LoadingStatus;
 	public loadingStatus = LoadingStatus.INITIAL;
 	public cardInfo: CardInfo[] = [];

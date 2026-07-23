@@ -15,6 +15,6 @@ export const WINDOW = new InjectionToken<Window>('WindowToken', {
 	imports: [RouterOutlet],
 	template: '<router-outlet />',
 })
-export class App {
+export class AppComponent {
 	protected title = 'personal-website';
 }
