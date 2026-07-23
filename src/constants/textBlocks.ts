@@ -1,6 +1,6 @@
 export const home = {
 	experience: [
-		"I'm a full-stack software engineer with over",
+		"I'm a senior full-stack software engineer with over",
 		'of professional experience.',
 	],
 	nextSteps: [
@@ -19,6 +19,10 @@ export const home = {
 		{
 			date: 'Dec 2023',
 			label: 'Promoted to Software Engineer II',
+		},
+		{
+			date: 'Aug 2026',
+			label: 'Promoted to Senior Full Stack Engineer',
 		},
 		{
 			date: 'Now',
